@@ -1,0 +1,16 @@
+#header{background-color:#13ea1e;
+       height:50px;
+	   position:fixed;
+}
+#header a{
+	display:black;
+	position:absolute;
+	right:0px;
+	top:50px;
+}
+#content{
+	 font-family:vardana,arial,felvetica;
+	   font-size:20px;
+	color:#13ea1e;
+	margin-top:40px;
+}

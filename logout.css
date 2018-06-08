@@ -1,0 +1,45 @@
+@charset "utf-8";
+.head{
+	height:100px;
+	background-color:#13ea1e;
+	margin-left:-8px;
+	margin-right:-8px;
+	margin-top:-8px;
+	
+     }
+.unotes{
+	  font-size:42px;
+	  font-family:comic sans ms;
+	  color:white;
+	  font-weight:bold;
+	  position:relative;
+	  margin-left:100px;
+	  top:32px;
+     }
+
+.footer{
+	   font-family:vardana,arial,felvetica;
+	   font-size:20px;
+	   color:white;
+	   background-color:#13ea1e;
+	   margin-left:-8px;
+	   margin-right:-8px;
+	   margin-bottom:-8px;
+	   margin-top:160px;
+	   height:40px;
+	  
+      }
+.p4{
+	position:relative;
+	margin-left:15px;
+	
+	margin-top:2px;
+	float:left;
+}
+.name{
+	
+	float:right;
+	
+	margin-right:15px;
+	margin-top:2px;
+}

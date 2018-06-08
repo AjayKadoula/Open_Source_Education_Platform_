@@ -1,0 +1,304 @@
+
+
+.center{
+	width:490px;
+	height:auto;
+	margin:0px auto;
+	background-color:white;
+}
+
+.posts{
+	width:490px;
+	height:auto;
+	position:relative;
+	margin-top:140px;
+	
+}
+
+.create-posts{
+	
+	width: 490px;
+	background: #FFF none repeat scroll 0% 0%;
+	border-radius: 2px;
+	border: 1px solid blue;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom:10px;
+}
+
+.c-header{
+	width:100%;
+	height:auto;
+	padding-top:5px;
+}
+
+.c-h-inner{
+	width:95%;
+	height:25px;
+	margin:0px 15px;
+	border-bottom:1px solid blue;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.c-h-inner ul{
+	list-style:none;	
+	margin-top:2px;
+}
+
+.c-h-inner ul li{
+	display:inline;
+	border-right: 1px solid blue;
+	padding-right:10px;
+}
+.c-h-inner  ul li a{
+	color: rgb(59, 89, 152);
+	text-decoration: none;
+}
+.c-h-inner ul li a:hover{
+	text-decoration:underline;
+}
+
+.c-h-inner ul li img{
+	margin: -2px 3px;
+}
+.c-body{
+	width:100%;
+	height:auto;
+	border-bottom:1px solid blue;
+	overflow: auto;
+}
+#body-bottom{
+	border-top: 1px solid blue;
+	margin: 10px;
+	display: none;
+}
+#body-bottom img{
+	margin: 10px;
+	height: 95px;
+	width: 95px;
+}
+.iconw-margin{
+	margin: -2px 4px;
+}
+.iconp-margin{
+	margin: -3px 1px;
+}
+.body-left{
+	width:62px;
+	height:auto;
+	float:left;
+	margin-left:15px;
+}
+
+
+.imgbox {
+	
+	
+	float:left;
+	
+	
+	  border-radius: 1000px !important;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border: 1px solid blue;
+	
+    margin-top: 15px;
+	margin-left:20px;
+}
+
+.imgbox img{
+	
+	width:100%;
+	height:100%;
+		
+}
+
+.body-right{
+	width:
+}
+
+.text-type{
+	width: 200px;
+	height: auto;
+	resize: none;
+	margin: 23px 0px;
+	font-size: 14px;
+	color: #959698;
+	border:none;
+	overflow:hidden;
+}
+
+.c-footer{
+	background-color:#f4f7f2;
+	overflow:auto;
+}
+.right-box{
+	float:right;
+}
+
+.right-box ul {
+	list-style:none;
+	
+}
+
+.right-box ul li{
+	display:inline;
+}
+
+.btn2{
+	background: #00b5ff none repeat scroll 0% 0%;
+	color: white;
+	font-weight: bolder;
+	font-size: 12px;
+	margin: 0px 7px;
+	width: 165px;
+	height: 35px;
+	border: 1px solid blue;
+	border-radius: 4px;
+}
+
+.btn2:active{
+	border:2px solid blue;
+}
+
+.btn2:hoveR{
+	cursor:pointer;
+	background: blue;
+}
+
+
+
+.post-show{
+	width: 490px;
+	background: white none repeat scroll 0% 0%;
+    position: relative;
+    padding: 10px;
+    border-radius: 50px 20px;
+	border: 1px solid blue;
+	
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);  
+}
+
+.post-show-inner{
+	width:95%;
+	margin:10px auto;
+}
+
+.post-header{
+	width:100%;
+	height:60px;
+}
+.post-header  a:hover{
+	text-decoration:underline;
+}
+.post-header-text{
+	margin:8px 0px;
+}
+
+.post-img{
+	width:100%;
+	height:auto;
+	max-height:400px;
+}
+
+.post-img img{
+	    width: 100%;
+    border: 1px solid blue;
+    border-style: inset;
+	max-height:394px;
+}
+
+.post-img-footer{
+	border: 1px solid blue;
+	margin: -5px 0px 10px auto;
+}
+
+.post-footer-text{
+	padding:10px;
+}
+.post-footer-text h3{
+	color: rgb(20, 24, 76);
+	font-weight: normal;
+	font-size: 18px;
+}
+.post-footer-text p{
+	font-size: 13px;
+	color: #333;	
+}
+
+.post-footer-text small{
+	color: rgb(204, 204, 204);
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+.post-footer-text ul{ list-style:none;}
+
+.post-footer-text ul li{
+	
+}
+
+.post-left-box{
+	width:80%;
+	height:auto;
+}
+
+.post-left-box ul{list-style:none;}
+
+.post-left-box ul li{
+	display:block;
+	
+}
+
+.post-left-box ul li a{
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	color: #3F66B7;
+}
+
+.post-left-box ul li small{
+	font-size: 12px;
+	
+}
+
+
+.id-img-box{
+	
+	float:left;
+	
+	
+	  border-radius: 1000px !important;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    border: 6px solid rgba(173, 188, 188, 0.7);
+}
+
+.id-img-box img{
+	width:100%;
+	height:100%;
+}
+
+.id-name{
+	padding: 8px 55px;
+}
+
+
+.post-footer{
+	width:100%;
+	height:20px;
+	margin-top:5px;
+}
+
+.post-footer ul {list-style:none}
+
+.post-footer ul li{display:inline; margin:0px 4px;}
+
+.post-footer a{text-decoration:none; font-size:13px; color:blue;}
+.post-footer a:hover{text-decoration:underline;}
+
+

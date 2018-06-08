@@ -1,0 +1,17 @@
+.body{
+	
+	width:80%;
+	
+}
+body{
+	
+	background-image: url("https://st2.depositphotos.com/1280399/6228/i/950/depositphotos_62289735-stock-photo-white-background-smooth-metal-texture.jpg");
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #0c9994;
+    margin: 1em 0;
+    padding: 0; 
+}

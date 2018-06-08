@@ -1,0 +1,21 @@
+.body{
+	max-width:1150px;
+	
+	
+}
+
+body{
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+body a{
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	font-weight:400;
+	font-family: 'Open Sans', sans-serif;
+}
+
