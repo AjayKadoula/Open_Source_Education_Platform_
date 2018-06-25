@@ -1,12 +1,12 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 include './post.php';
 
 
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -20,19 +20,19 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 </style>
 </head>
-<body >  
+<body >
 <center >
 
 <div style="width:80%;  color:black;" >
-  
+
 
 <div class="borderline">
 <div><h1>ENTRANCE EXAMS DIRECTORY</h1></div><br><hr><br>
@@ -40,7 +40,7 @@ body{
 We have compiled a list of top entrance exams after Gratuation for Masters courses and jobs. Some of the below mentioned entrance exams are conducted at the All India level (National Level) while others at the State Level or colleges conduct their own entrance exams. .</p></div></div><br><hr><br><br>
 
      <h3 dir="ltr"><u>Defence </u></h3>
-	 
+
 <p dir="ltr"><strong>AFCAT :</strong> This is an All India level defence recruitment exam to select candidates for Air force. AFCAT is held twice a year,&nbsp;for grant of Short Service Commission in Flying Branch and Permanent/ Short Service Commission in Technical and Ground Duty Branches through Air Force Common Admission Test (AFCAT)&nbsp;</p>
 <p dir="ltr">&nbsp;</p>
 <p dir="ltr"><strong>UPSC CDS:</strong> The Combined Defence Services Examination (CDSE) is another defence recruitment all India level entrance exam conducted by the Union Public Service Commission. The exam is held twice a year for recruitment into the Indian Military Academy (IMA), Officers Training Academy (OTA), Indian Naval Academy (INA) and Indian Air Force (IAF) Academy.</p>
@@ -188,9 +188,8 @@ The TANCET exam is basically divided into 4 sections like Quantitative Ability, 
 </center>
 </body>
 </html>
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }
 ?>
-

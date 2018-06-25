@@ -1,14 +1,14 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include 'bar\navigation_bar.php';
 
 $username1=$_SESSION["user_name"];
 include './post4.php';
 
- 
+
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -17,7 +17,7 @@ include './post4.php';
 <link rel="stylesheet" href="home.css" type="text/css">
 <link rel="stylesheet" href="css\post.css" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
 
 <style>
 body {
@@ -46,7 +46,7 @@ header {
 }
 
 figure.profile-banner {
-	
+
   left:     0;
   right: 0;
   height:125%;
@@ -56,7 +56,7 @@ figure.profile-banner {
   z-index:  1;
 }
 figure.profile-banner img {
-	
+
 width:100%;
 height:80%;
 }
@@ -80,7 +80,7 @@ div.profile-stats {
   position: absolute;
   right: 0;
   z-index: 2;
-  
+
   /* Generated Gradient */
   background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.51) 3%, rgba(0,0,0,0.75) 61%, rgba(0,0,0,0.5) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(3%,rgba(0,0,0,0.51)), color-stop(61%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.5)));
@@ -119,7 +119,7 @@ div.profile-stats a.follow {
   float: right;color: #ffffff;
   margin-top: 5px;
   text-decoration: none;
-  
+
   /* This is a copy and paste from Bootstrap */
   background-color: #49afcd;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -144,7 +144,7 @@ div.profile-stats a.follow {
 }
 
 div.profile-stats a.follow.followed {
-  
+
   /* Once again copied from Boostrap */
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -189,7 +189,7 @@ padding: 0;}
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }
 .upload-button {
-	
+
   font-size: 1.2em;
 }
 
@@ -206,10 +206,10 @@ padding: 0;}
 <body >
 <div style="display:none;">jai MEERA baba jai JANKHA peer</div>
 		<?php
-							
+
 							foreach($userprofile as $row){
 							//fetching all posts
-							
+
 						echo '
 <center>
 <div style="width:80%; margin-top:-104px;">
@@ -218,8 +218,8 @@ padding: 0;}
     <img src="https://unsplash.it/975/300" alt="Profile banner" />
   </figure>
   <figure class="profile-picture"  >
-         <img class="profile-pic"  
-  style="  
+         <img class="profile-pic"
+  style="
 
   border: 5px #efefef solid;
   border-radius: 50%;
@@ -251,11 +251,11 @@ padding: 0;}
 
 </div>
 </center>
-								
-						<br> ';	
-					}	
+
+						<br> ';
+					}
 				?>
-<div > 
+<div >
 
  <div style="
   width:19.5%; z-index:2; opacity:0.9; margin-top:-0px;
@@ -275,20 +275,20 @@ padding: 0;}
 </div>
 </div>
 <div style=" margin-top:8px; margin-left:1035px;
-  width:19.5%; position:relative; z-index:2 ; 
+  width:19.5%; position:relative; z-index:2 ;
  ">
 <div class='right' ><center>
 
 <div style="font-family:Georgia;  " ><b style="font-family:Georgia; text-decoration: underline;">Who to follow- </b>  <a href="#">view all</a></div>
-       </center><br> <ul class="list">		
+       </center><br> <ul class="list">
 		<?php
-							
+
 							foreach($followerlist as $row2){
 							//fetching all posts
-							
+
 							$id2 = $row2['user_id'];
 						echo '
-						
+
 									<li>
 									<img src="profile_image/'.$row2['profile_image'].'" title="" alt="" />
 									<section class="list-left">
@@ -296,16 +296,16 @@ padding: 0;}
 									<p class="catpath">'.$row2['user_gender'].'</p>
 									<span class="cityname">'.$row2['user_dob'].' </span>
 									<span class="adprice"><a href="#">Follow</a></span>
-									
+
 									</section>
 									<section class="list-right">
-									
+
 									</section>
 									<div class="clearfix"></div>
-									</li> 
-								
-						<br> ';	
-					}	
+									</li>
+
+						<br> ';
+					}
 				?>
 				</ul>
 </div>
@@ -317,26 +317,26 @@ padding: 0;}
 
 </div><center style="margin-top:-755px;"><br>
 <div class="box" >
-   
-   
-   
-   <div class="wrapper"  >		
+
+
+
+   <div class="wrapper"  >
 		<!--content -->
 		<div class="content">
 			<!--left-content-->
 			<div style="margin-top:120px;" ><br>
-				
-					
+
+
 						<?php foreach($userpost as $row){
 							//fetching all posts
 							$time_ago = $row['status_time'];
 						echo '
-						
+
 						<div class="post-show">
 									<div class="post-show-inner" ><div class="id-img-box" style="margin-left:10px;"><img src="profile_image/'.$row['profile_image'].'"></img></div><br>
 										<div class="post-header">
 											<div class="post-left-box">
-												
+
 												<div class="id-name" >
 													<ul>
 														<li style="text-transform:Capitalize; margin-top:-20px;"><a href="#">'.$row['fname']." ".$row['sname'].'</a></li>
@@ -346,7 +346,7 @@ padding: 0;}
 											</div>
 											<div class="post-right-box"></div>
 										</div>
-									
+
 											<div class="post-body" style="display:inline;">
 											<div style="position:relative;  padding:10px; background-color:#f4f5f7;" >
 											<p style="font-family: inherit;">	'.$row['query'].'</p>
@@ -358,20 +358,20 @@ padding: 0;}
 														<li><a href="#"> Like</a></li>
 														<li><a href="comment.php">Comment</a></li>
 														<li><a href="#">Share</a></li>
-													</ul>	
+													</ul>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div><br> ';	
-					}	
+								</div><br> ';
+					}
 				?>
 					</div>
-					</form>	
-													
+					</form>
+
 			</div>
 
- 
+
 
 </div>
 
@@ -420,7 +420,7 @@ $(document).on('click','.loadmore',function () {
 // This just toggles the follow/following of the button
 $('a.follow').click(function () {
   $(this).toggleClass('followed');
-  
+
   if($(this).hasClass('followed')) {
     $(this).text('Followed');
     $('.ul li:last-child').html('#+1<span>Followers</span>');
@@ -430,9 +430,9 @@ $('a.follow').click(function () {
     $('.ul li:last-child').html('#<span>Followers</span>');
   }
 });
-    
+
 </script>
-<script src="jquery\jquery-2.2.4.min.js" > </script> 
+<script src="jquery\jquery-2.2.4.min.js" > </script>
 <script src="jquery\profile.js" >
 </script>
 
@@ -441,7 +441,7 @@ $('a.follow').click(function () {
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

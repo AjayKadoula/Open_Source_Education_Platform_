@@ -1,14 +1,14 @@
 
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include 'bar\navigation_bar.php';
 
 
 
- 
+
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -16,7 +16,7 @@ include 'bar\navigation_bar.php';
 <title> Books</title>
 <style>
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 .banner {
@@ -68,7 +68,7 @@ padding: 0;}
 	padding:20px;
 	text-aling:center;
 	font-family:Arial,Courier;
-	
+
 }
 .box a{text-decoration:none;}
 .box a :hover{
@@ -78,10 +78,10 @@ padding: 0;}
 	font-size:40px;
 	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	text-decoration:none;
-	
+
 	font-family:serif;
-	
-	
+
+
 }
 hr{
 	display: block;
@@ -89,7 +89,7 @@ hr{
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 </style>
 </head>
@@ -100,21 +100,21 @@ hr{
 
 
 <div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1 style="margin-top:-20px;">Share Our  <span class="segment-heading">Study/Lectures videos  </span> With Unotes</h1>
 			<p>####################################################<br></p>
 			<div style="margin-top:-10px;"><a href="postvideos.php">Post Videos Lecture</a></div>
 	  </div>
-	  
+
 </div>
 <hr>
       <div class="box">
 	     <a href="videos.php?lecture=free"> <div class="option">Free Lecture</div></a>
 		 <a href="videos.php?lecture=paid"> <div class="option">Paid Lecture</div></a>
-	        
-	 
+
+
       </div>
-	
+
 </div>
 <br>
 <hr style="width:80%;">
@@ -126,7 +126,7 @@ hr{
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

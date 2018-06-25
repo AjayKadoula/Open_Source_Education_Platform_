@@ -1,8 +1,8 @@
 
-<?php 
-      
+<?php
+
 	class  Main{
-	       
+
 		//fetching posts from database
 		public function posts(){
 			global $pdo;
@@ -10,8 +10,8 @@
 			$query->execute();
 			return $query->fetchAll();
 		}
-		
-		//fetch user data by user id 
+
+		//fetch user data by user id
 		public function user_data($user_id){
 			global $pdo;
 			$query = $pdo->prepare('SELECT * FROM users WHERE user_id = ?');
@@ -111,6 +111,13 @@
 			$query->execute();
 			return $query->fetchAll();
 		}
+    public function followeralready($id){
+      global $pdo;
+      $query = $pdo->prepare('SELECT * FROM `following` WHERE user_id = ?');
+      $query->bindvalue(1,$id);
+      $query->execute();
+      return $query->fetchAll();
+    }
 		public function userprofile($username1){
 			global $pdo;
 			$query = $pdo->prepare("SELECT * FROM `users` where user_name='$username1' ");
@@ -123,7 +130,7 @@
 			$query->execute();
 			return $query->fetchAll();
 		}
-		
-		 
+
+
 	}
 ?>

@@ -1,13 +1,13 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 
 if(isset($_GET["branch"])){
-	
-         
+
+
        $row1=$_GET["branch"];
-         
+
 }
 
 
@@ -21,8 +21,8 @@ if(isset($_GET["branch"])){
 <style>
 .body{
 	max-width:1150px;
-	
-	
+
+
 }
 .banner h1 {
 	color:#fff;
@@ -271,7 +271,7 @@ p.post-terms a {
     border-bottom: 3px solid #F4F4F4;
 }
 body{
-	
+
 	background-image: url("https://st2.depositphotos.com/1280399/6228/i/950/depositphotos_62289735-stock-photo-white-background-smooth-metal-texture.jpg");
 }
 .banner {
@@ -287,29 +287,29 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 </style>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
 <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<!--//fonts-->	
+<!--//fonts-->
 
 </head>
 <body>
 
-	<center>	
+	<center>
 	<div class="body">
 			<h2 class="head">Add Your Institute</h2><hr><br><br><br><br>
 	<div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Unotes</h1>
 			<p>"Try not to become a man of success. Rather become a man of value."<br>
 
@@ -321,36 +321,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="submit-ad main-grid-border">
 		<div class="container">
 			<div class="post-ad-form">
-				
+
 			    <form id="upload" action="post_ad_function.php" method="POST" enctype="multipart/form-data">
 						<label>Course Name <span>*</span></label>
 						<input  readonly="readonly" type="text" name="course" value="<?php echo $row1;?>" >
 						<div class="clearfix"></div><br>
 					<div class="personal-details"><br><br>
-					
+
 						<label>Your institute Name <span>*</span></label>
 						<input type="text" name="institute_name" class="name" placeholder="uietkuk">
 						<div class="clearfix"></div><br>
-						
+
 					<label>Your institute URL <span>*</span></label>
 					<input type="text" name="url" class="phone"  placeholder="https://www.unotes.in/notes/post">
 					<div class="clearfix"></div><br><br>
-						
-					
+
+
 						<p class="post-terms">By clicking <strong>post Button</strong> you institute will be added</p>
-					<input type="submit"  name="institute" value="Post">					
+					<input type="submit"  name="institute" value="Post">
 					<div class="clearfix"></div>
 					</form>
 					</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 	</div>
 
 </body>
 </html>
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

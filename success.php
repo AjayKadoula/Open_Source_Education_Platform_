@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 ?>
 <!doctype html>
 <html lang="eng">
@@ -22,7 +22,7 @@ Unotes.in
 </div>
 </div>
 <center>
-<div class="error"><?php 
+<div class="error"><?php
    if(isset($_GET["id"])){
 	   echo"<div id='".$_GET["id"]."'>".$_GET["v"]."</div>";
    }
@@ -52,7 +52,7 @@ Unotes.in
 </div>
 
 <div >
-        
+
   <textarea class="objective" id="text" name="image_text" placeholder="Write Your objective/ Some positive quotes........."></textarea><br>
    <button type="submit" name="submit" class="enter"><span>Enter to website</span>
 </form>
@@ -63,7 +63,7 @@ Unotes.in
 <div>
 <div class="footer"><p class="p4">© unotes.in 2018 <p> <p class="name">Developed by AJAY KADOULA</p></div>
 </div>
-<script src="jquery\jquery-2.2.4.min.js" > </script> 
+<script src="jquery\jquery-2.2.4.min.js" > </script>
 <script src="jquery\profile.js" >
 </script>
 </body>

@@ -1,13 +1,13 @@
 
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 include './post.php';
 
 
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -21,10 +21,10 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 
@@ -83,22 +83,22 @@ body{
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
-	
+
 }
 </style>
 </head>
-<body >  
+<body >
 <center ><div  style="max-width:80%;">
 <div ><h1> EXAMS</h1><hr></div><br>
 
 
 <div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1 style="margin-top:-20px;">Share Exams Papers & <span class="segment-heading">Exams Notes  </span> With Unotes</h1>
 			<p>****************************************************************</p>
 			<div style="margin-top:-10px;"><a href="home.php">Go to Home</a></div>
 	  </div>
-	  
+
 </div><br><hr><br><br><br>
 <div class="body"><br><br>
 <a href="exam_directory.php"><div >ENTRANCE + JOBS EXAMS DIRECTORY</div></a>
@@ -109,7 +109,7 @@ body{
 <a href="#"><div>RESARCH PAPER</div></a>
 
 </div>
-	
+
 </div>
 <br><br>
 
@@ -117,7 +117,7 @@ body{
 </center>
 </body>
 </html>
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

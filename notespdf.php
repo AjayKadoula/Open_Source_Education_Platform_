@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include 'bar\navigation_bar.php';
 include 'post2.php';
 $_SESSION["branch"]=$_GET["branch"];
@@ -203,7 +203,7 @@ img{max-width:100%;}
 
 
 <div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1 style="margin-top:-20px;">Share  Your <span class="segment-heading">Institute Notes  </span> With Unotes</h1>
 			<p>“Here, class attendance is expected and students are required to take notes, which they are tested on. What is missing, it seems to me, is the use of knowledge, the practical training.” <br>
 ― Harrison Salisbury</p>
@@ -224,24 +224,24 @@ img{max-width:100%;}
 						<h3>Latest Collections of Notes</h3>
 					</div>
 					<div class="right-content-heading-right">
-						
+
 					</div>
 					<div class="clear"> </div>
 				</div>
 
 				<div class="content-grids">
 								 <?php
-	 
-							
+
+
 							foreach($notespdf as $row){
 							//fetching all posts
-							
+
 							$course = $row['course'];
 							$institute= $_GET['institute'];
 							if($course==$row1){
 						echo '
 						 <div >
-            
+
 		         <div class="content-grid">
 						<a href="pdfdownload.php ? file=images/notes/'.$row['ad_pdf'].'" download><img src="images/PDF_icon_Material_design.jpg" title="click to Download" /></a>
 						<h2 style="color:black;">'.$row['subject'].'</h2>
@@ -253,12 +253,12 @@ img{max-width:100%;}
 						</ul>
 						<a class="button" id="read" href="pdf-flipbook-master/pdfflipbook.php? file=images/notes/'.$row['ad_pdf'].'">Read now</a>
 					</div>
-		  
-		  
-		  
+
+
+
                  </div>
-			 
-						 ';	
+
+						 ';
 							}}
 				?>
 
@@ -269,7 +269,7 @@ img{max-width:100%;}
     $('#read').pdfFlipbook();</script>
 </script>
 
-					
+
 					<div class="clear"> </div>
 					<!---start-pagenation----->
 					<div class="pagenation">
@@ -298,7 +298,7 @@ img{max-width:100%;}
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

@@ -1,14 +1,14 @@
 
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include 'bar\navigation_bar.php';
 
 
 
- 
+
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -16,7 +16,7 @@ include 'bar\navigation_bar.php';
 <title> Books</title>
 <style>
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 .banner {
@@ -65,10 +65,10 @@ padding: 0;}
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 ">
 <div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1 style="margin-top:-20px;">Share Our  <span class="segment-heading">Study videos  </span> With Unotes</h1>
 			<p>####################################################<></p>
 			<div style="margin-top:-10px;"><a href="#">Post Videos Lecture</a></div>
@@ -82,7 +82,7 @@ padding: 0;}
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

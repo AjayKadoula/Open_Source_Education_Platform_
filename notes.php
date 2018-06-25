@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -13,7 +13,7 @@ include './bar\navigation_bar.php';
     <script src="jquery\notes.js" type="text/javascript"></script>
 <style>
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 
@@ -23,7 +23,7 @@ hr{
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 </style>
 </head>
@@ -37,20 +37,20 @@ hr{
  Research your options when it comes to choosing the degree you want to earn,
  as the program best suited for you will depend on your personal and professional aspirations.
  We’ve broken down the most popular degrees in the fastest-growing industries.
- Read through our guides to learn more about each field’s available higher education tracks, 
+ Read through our guides to learn more about each field’s available higher education tracks,
  and the qualifications, curricula, career expectations, salary averages, and next steps for each one.</p></div></div><hr><br><br>
- 
- 
-        
+
+
+
        <div>
 
-        
-          
+
+
            <div style="height:320px;">
           <h2> Engineering and Technology</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Computer Science And Engineering</button>
            <div  class="dropdown-content">
@@ -59,7 +59,7 @@ hr{
             <a href="notesfunctionbach.php ? branch=computer_science_phd">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">Mechanical<br> Engineering</button>
            <div  class="dropdown-content">
@@ -68,7 +68,7 @@ hr{
             <a href="notesfunctionbach.php ? branch=Mechanical_Engineering_phd">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Electronics And Comm. Engineering</button>
            <div  class="dropdown-content">
@@ -77,7 +77,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Civil<br> Engineering</button>
            <div  class="dropdown-content">
@@ -86,8 +86,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Electrical<br> Engineering</button>
            <div  class="dropdown-content">
@@ -96,8 +96,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Bio-Medical Engineering</button>
            <div  class="dropdown-content">
@@ -106,8 +106,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Material Science And Techanology</button>
            <div  class="dropdown-content">
@@ -116,8 +116,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Bio<br>Techanology</button>
            <div  class="dropdown-content">
@@ -126,8 +126,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Instrumentation<br> Engineering</button>
            <div  class="dropdown-content">
@@ -136,8 +136,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Aeronautical <br>Engineering</button>
            <div  class="dropdown-content">
@@ -146,17 +146,17 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
-			 
+
+
+
 			 </div><hr><br><br>
-			 
-			 
+
+
 			  <div style="height:320px;">
           <h2> Engineering and Technology</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Agricultural <br>Engineering</button>
            <div  class="dropdown-content">
@@ -165,7 +165,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">Automobile <br>Engineering</button>
            <div  class="dropdown-content">
@@ -174,7 +174,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Marine <br>Engineering</button>
            <div  class="dropdown-content">
@@ -183,7 +183,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Chemical <br>Engineering</button>
            <div  class="dropdown-content">
@@ -192,8 +192,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn"> Textile <br>Engineering</button>
            <div  class="dropdown-content">
@@ -202,8 +202,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Space <br>Techanology</button>
            <div  class="dropdown-content">
@@ -212,8 +212,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Robotics <br>Engineering</button>
            <div  class="dropdown-content">
@@ -222,8 +222,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Power <br>Engineering</button>
            <div  class="dropdown-content">
@@ -232,8 +232,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Metallurgical <br>Engineering</button>
            <div  class="dropdown-content">
@@ -242,8 +242,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Industrial <br>Engineering</button>
            <div  class="dropdown-content">
@@ -252,16 +252,16 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
-			 
+
+
+
 			 </div><hr><br><br>
-        
+
 		 <div style="height:320px;">
           <h2> Science</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Department of Chemistry</button>
            <div  class="dropdown-content">
@@ -270,7 +270,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">Department of <br>Physics</button>
            <div  class="dropdown-content">
@@ -279,7 +279,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Biology</button>
            <div  class="dropdown-content">
@@ -288,7 +288,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Geography</button>
            <div  class="dropdown-content">
@@ -297,8 +297,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of<br> Geology</button>
            <div  class="dropdown-content">
@@ -307,8 +307,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Mathematics</button>
            <div  class="dropdown-content">
@@ -317,8 +317,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Electronic Science</button>
            <div  class="dropdown-content">
@@ -327,8 +327,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Static & O.R.</button>
            <div  class="dropdown-content">
@@ -337,8 +337,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Dept. of Comp. Sci. And Applications</button>
            <div  class="dropdown-content">
@@ -347,8 +347,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Instrumentation</button>
            <div  class="dropdown-content">
@@ -357,16 +357,16 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
-			 
+
+
+
 			 </div><hr><br><br>
-        
+
 		 <div style="height:320px;">
           <h2> Art and Language</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Department of <br>English</button>
            <div  class="dropdown-content">
@@ -375,7 +375,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">Department of <br>Hindi</button>
            <div  class="dropdown-content">
@@ -384,7 +384,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Punjabi</button>
            <div  class="dropdown-content">
@@ -393,7 +393,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Foreign Languages</button>
            <div  class="dropdown-content">
@@ -402,8 +402,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Library and Information Sci.</button>
            <div  class="dropdown-content">
@@ -412,8 +412,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Education</button>
            <div  class="dropdown-content">
@@ -422,8 +422,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Physical Education</button>
            <div  class="dropdown-content">
@@ -432,7 +432,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
+
 			<div class="dropdown">
            <button  class="dropbtn">Department of Fashion Designing</button>
            <div  class="dropdown-content">
@@ -449,8 +449,8 @@ hr{
              <a href="#about">Master's</a>
             <a href="#contact">Ph.D.</a>
             </div>
-             </div>			 
-			 
+             </div>
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of fine arts in Graphics</button>
            <div  class="dropdown-content">
@@ -459,16 +459,16 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
-			 
+
+
+
 			 </div><hr><br><br>
-        
+
 		 <div style="height:320px;">
           <h2> Social Science</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Department of <br>Political Science</button>
            <div  class="dropdown-content">
@@ -477,7 +477,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">Department of <br>History</button>
            <div  class="dropdown-content">
@@ -486,7 +486,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Economics</button>
            <div  class="dropdown-content">
@@ -495,7 +495,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Social Work</button>
            <div  class="dropdown-content">
@@ -504,8 +504,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Public Administration</button>
            <div  class="dropdown-content">
@@ -514,8 +514,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Sociology</button>
            <div  class="dropdown-content">
@@ -524,8 +524,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Psychology</button>
            <div  class="dropdown-content">
@@ -534,8 +534,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Women's Study Research Centre</button>
            <div  class="dropdown-content">
@@ -544,9 +544,9 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
-		    
+
+
+
 			<div class="dropdown">
            <button  class="dropbtn">Department of<br> Humanities</button>
            <div  class="dropdown-content">
@@ -555,8 +555,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br> Law</button>
            <div  class="dropdown-content">
@@ -565,16 +565,16 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
-			 
+
+
+
 			 </div><hr><br><br>
-        
+
 		 <div style="height:320px;">
           <h2> Life Science</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Department of <br>Botany</button>
            <div  class="dropdown-content">
@@ -583,7 +583,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">Department of<br> Zoology</button>
            <div  class="dropdown-content">
@@ -592,7 +592,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Bio-Chemistry</button>
            <div  class="dropdown-content">
@@ -601,7 +601,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Biotechanology</button>
            <div  class="dropdown-content">
@@ -610,8 +610,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Microbiology</button>
            <div  class="dropdown-content">
@@ -620,8 +620,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Home Science</button>
            <div  class="dropdown-content">
@@ -630,8 +630,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Institute of <br>Environmental Studies</button>
            <div  class="dropdown-content">
@@ -640,8 +640,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Aqua Science</button>
            <div  class="dropdown-content">
@@ -650,8 +650,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Applied Science</button>
            <div  class="dropdown-content">
@@ -660,8 +660,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			  
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn"> Department of <br>Nursing</button>
            <div  class="dropdown-content">
@@ -670,16 +670,16 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
-			 
+
+
+
 			 </div><hr><br><br>
-        
+
 		 <div style="height:320px;">
           <h2> Indic Studies</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Department of <br>Philisophy</button>
            <div  class="dropdown-content">
@@ -688,7 +688,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">A.I.H,Culture & Archaeology</button>
            <div  class="dropdown-content">
@@ -697,7 +697,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Music and Dance</button>
            <div  class="dropdown-content">
@@ -706,7 +706,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of <br>Fine Arts</button>
            <div  class="dropdown-content">
@@ -715,8 +715,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Department of Sanskrit,Pali & Prakrit</button>
            <div  class="dropdown-content">
@@ -725,14 +725,14 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
 			 </div>
-			 
+
 			 </div><hr><br><br>
-        
+
 		 <div style="height:320px;">
           <h2> Commerce and Management</h2><br><br>
-		  
-		  
-		  
+
+
+
 		  <div class="dropdown">
            <button  class="dropbtn">Department of <br>Commerce</button>
            <div  class="dropdown-content">
@@ -741,7 +741,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 			<div class="dropdown">
            <button  class="dropbtn">University School of Management</button>
            <div  class="dropdown-content">
@@ -750,7 +750,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Dept. of Tourism & Hotel Management</button>
            <div  class="dropdown-content">
@@ -759,7 +759,7 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
+
 		    <div class="dropdown">
            <button  class="dropbtn">Institute of<br> Management Studies</button>
            <div  class="dropdown-content">
@@ -768,8 +768,8 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div>
-			 
-			 
+
+
 		    <div class="dropdown">
            <button  class="dropbtn">Institute of Mass Commu.& Media Tech.</button>
            <div  class="dropdown-content">
@@ -778,23 +778,23 @@ hr{
             <a href="#contact">Ph.D.</a>
             </div>
              </div><br><br>
-			 
-			 
 
-			 
-			 
+
+
+
+
 			 </div><hr><br><br>
-        
-        
-        
-        
+
+
+
+
       </div>
 
-    
- 
- 
- 
- 
+
+
+
+
+
 
 
 </div>
@@ -805,7 +805,7 @@ hr{
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

@@ -1,11 +1,11 @@
 
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
-include './post.php'; 
+include './post.php';
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -17,7 +17,7 @@ include './post.php';
     <script src="jquery\.js" type="text/javascript"></script>
 	<style>
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 .banner {
@@ -312,7 +312,7 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 
 </style>
@@ -324,7 +324,7 @@ hr {
 <!--fonts-->
 <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<!--//fonts-->	
+<!--//fonts-->
 <!-- js -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- js -->
@@ -348,10 +348,10 @@ hr {
 			} );
 		</script>
     <script src="js/tabs.js"></script>
-	
+
 <script type="text/javascript">
-$(document).ready(function () {    
-var elem=$('#container ul');      
+$(document).ready(function () {
+var elem=$('#container ul');
 	$('#viewcontrols a').on('click',function(e) {
 		if ($(this).hasClass('gridview')) {
 			elem.fadeOut(1000, function () {
@@ -360,7 +360,7 @@ var elem=$('#container ul');
 				$('#viewcontrols .gridview').addClass('active');
 				$('#viewcontrols .listview').removeClass('active');
 				elem.fadeIn(1000);
-			});						
+			});
 		}
 		else if($(this).hasClass('listview')) {
 			elem.fadeOut(1000, function () {
@@ -369,7 +369,7 @@ var elem=$('#container ul');
 				$('#viewcontrols .gridview').removeClass('active');
 				$('#viewcontrols .listview').addClass('active');
 				elem.fadeIn(1000);
-			});									
+			});
 		}
 	});
 });
@@ -385,10 +385,10 @@ var elem=$('#container ul');
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 ">
 <div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1>Sell or Advertise   <span class="segment-heading">    books online </span> with Unotes</h1>
 			<p>“Books serve to show a man that those original thoughts of his aren’t very new after all.” <br>
 ― Abraham Lincoln</p>
@@ -404,7 +404,7 @@ var elem=$('#container ul');
 <div>
 <div style="margin-left:180px;">
       <div class="ads-display col-md-9">
-					<div class="wrapper">					
+					<div class="wrapper">
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					  <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
 						<li role="presentation" class="active">
@@ -436,9 +436,9 @@ var elem=$('#container ul');
 								<div class="clearfix"></div>
 							<ul class="list">
 
-							
+
 									<?php
-							
+
 							foreach($adpost as $row){
 							//fetching all posts
 							$time_ago = $row['time'];
@@ -457,21 +457,21 @@ var elem=$('#container ul');
 									<span class="cityname">City name<br>'." ".$row['city'].'</span>
 									</section>
 									<div class="clearfix"></div>
-									</li> 
+									</li>
 								</a>
-						<br> ';	
-					}	
+						<br> ';
+					}
 				?>
 									<div class="clearfix"></div>
-									</li> 
+									</li>
 								<div class="clearfix"></div>
 								</a>
 							</ul>
 						</div>
 							</div>
 						</div>
-						
-							
+
+
 						<ul class="pagination pagination-sm">
 							<li><a href="#">Prev</a></li>
 							<li><a href="#">1</a></li>
@@ -491,14 +491,14 @@ var elem=$('#container ul');
                              border-top: 1px solid blue;
                              margin: 1em 0;
                              padding: 0; ">
-					  
+
                  <div>
                  <p style="color:black;">© 2018 unotes.in AJAY KADOULA</p>
                  </div>
 					</div>
 				</div>
 			</div>
-			
+
 </div>
 </div>
 </div>
@@ -509,7 +509,7 @@ var elem=$('#container ul');
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

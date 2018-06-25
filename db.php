@@ -14,7 +14,7 @@ function find_user($connectionStatus,$username,$password)
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_num_rows($result)== 1){
 		return mysqli_fetch_assoc($result);
-	} 
+	}
 	return false;
 }
 function find_username($connectionStatus,$username)
@@ -23,7 +23,7 @@ function find_username($connectionStatus,$username)
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_num_rows($result)== 1){
 		return mysqli_fetch_assoc($result);
-	} 
+	}
 	return false;
 }
 
@@ -33,10 +33,10 @@ function signup_user($connectionStatus,$username,$password,$fname,$sname,$email,
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_affected_rows($connectionStatus)== 1){
 		return true;
-	} 
+	}
 	return false;
 }
-  
+
 
 function is_member($connectionStatus,$username)
 {
@@ -44,7 +44,7 @@ function is_member($connectionStatus,$username)
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_num_rows($result)== 1){
 		return true;
-	} 
+	}
 	return false;
 }
 $resultsPerPage=5;
@@ -56,7 +56,7 @@ function news_feed($connectionStatus,$resultsPerPage)
   $content=$data['news_description'];
   echo "<li><h3>$title</h3><p>$content<p></li>";
   }
-	
+
 }
 
 
@@ -69,28 +69,28 @@ function profile_image($connectionStatus,$username)
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_affected_rows($connectionStatus)== 1){
 		return true;
-	} 
+	}
 	return false;
 }
 
 function post_ad($connectionStatus,$category,$title,$price,$description,$ad_image,$name,$city,$mobile,$email)
 {
-	
+
 	$query=" INSERT INTO `post_ad` (`id`, `category`, `title`, `price`, `description`, `ad_image`, `name`, `city`, `mobile`, `email` ,`time`) VALUES (NULL, '$category', '$title', '$price', '$description', '$ad_image', '$name', '$city', '$mobile', '$email', CURRENT_TIMESTAMP)";
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_affected_rows($connectionStatus)== 1){
 		return true;
-	} 
+	}
 	return false;
 }
 function institute_ad($connectionStatus,$institute,$url,$course)
 {
-	
+
 $query="INSERT INTO `institutes` (`id`, `name`, `url`,`course`) VALUES (NULL, '$institute', '$url','$course')";
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_affected_rows($connectionStatus)== 1){
 		return true;
-	} 
+	}
 	return false;
 }
 function single($connectionStatus,$id)
@@ -99,21 +99,29 @@ function single($connectionStatus,$id)
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_num_rows($result)== 1){
 		return mysqli_fetch_assoc($result);
-	} 
+	}
 	return false;
 }
 function post_notes($connectionStatus,$subject,$description,$add_pdf,$name,$institute,$mobile,$email,$branch)
 {
-	
+
 	$query=" INSERT INTO `notespdf` (`id`, `subject`, `description`, `ad_pdf`, `name`, `institute`, `mobile`, `email`, `course`, `time`) VALUES (NULL, '$subject',  '$description', '$add_pdf', '$name', '$institute', '$mobile', '$email', '$branch', CURRENT_TIMESTAMP)";
 	$result=mysqli_query($connectionStatus,$query);
 	if(mysqli_affected_rows($connectionStatus)== 1){
 		return true;
-	} 
+	}
+	return false;
+}
+function follow_user($connectionStatus,$user_id,$follow_id)
+{
+
+	$query=" INSERT INTO `following` (`user_id`, `follower_id`) VALUES ('$user_id', '$follow_id')";
+	$result=mysqli_query($connectionStatus,$query);
+	if(mysqli_affected_rows($connectionStatus)== 1){
+		return true;
+	}
 	return false;
 }
 
 
-
 ?>
-

@@ -1,12 +1,12 @@
 <?php
 session_start();
-if(isset($_SESSION["user"]))
+if(isset($_SESSION["user_name"]))
 {
   include './bar\navigation_bar.php';
-  
+
 if(isset($_GET["id"])){
-	
-         
+
+
        $id=$_GET["id"];
 	   include "db.php";
         $connectionStatu = connect_db();
@@ -22,8 +22,8 @@ if(isset($_GET["id"])){
 			    $row["mobile"] = $status["mobile"];
 				 $row["email"] = $status["email"];
 				 $row["time"] = $status["time"];
-				 
-    }  
+
+    }
 }
 
 
@@ -40,7 +40,7 @@ if(isset($_GET["id"])){
 <style>
 
 body{
-	
+
 	background-image: url("https://st2.depositphotos.com/1280399/6228/i/950/depositphotos_62289735-stock-photo-white-background-smooth-metal-texture.jpg");
 }
 .banner {
@@ -231,7 +231,7 @@ h3.rate {
 <!--fonts-->
 <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<!--//fonts-->	
+<!--//fonts-->
 <!-- js -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
@@ -240,7 +240,7 @@ h3.rate {
 <body>
 
 	<div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with UNOTES</h1>
 			<p>**************************</p>
 			<a href="books.php"> Go to books</a>
@@ -288,12 +288,12 @@ h3.rate {
 					<div class="product-details">
 					    <h1>Title :<?php echo $row["title"] ;   ?> </h1><br>
 						<h4>Seller Name :<?php echo $row["name"] ;   ?> </h4>
-						
+
 						<p><strong>Summary</strong> :<?php echo $row["description"] ;   ?>.</p>
-					
+
 					</div>
 				</div>
-						
+
 				<div class="col-md-5 product-details-grid">
 					<div class="item-price">
 						<div class="product-price">
@@ -318,18 +318,18 @@ h3.rate {
 						<a href="mailto:<?php echo $row["email"] ;   ?>?Subject=Hey dear,%20 I %20 am %20 Interested %20 in %20 your %20 ad" target="_top"><?php echo $row["email"] ;   ?></a>
 						<br><p class="glyphicon glyphicon-earphone"></i><a href="whatsapp://send<?php echo $row["mobile"] ;   ?>?text=Hello%20dear!">Whatsapp</a></p>
 					</div>
-						
+
 				</div>
 			<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
 	<!--//single-page-->
-	
+
 </body>
 </html>
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

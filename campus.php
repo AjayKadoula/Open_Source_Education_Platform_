@@ -1,12 +1,12 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 include './post.php';
 
 
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -15,7 +15,7 @@ include './post.php';
 <link rel="stylesheet" href="home.css" type="text/css">
 <link rel="stylesheet" href="css\post.css" type="text/css">
 </head>
-<body>  
+<body>
 
      <h3 dir="ltr"><u>Defence </u></h3>
 <p dir="ltr"><strong>AFCAT :</strong> This is an All India level defence recruitment exam to select candidates for Air force. <a href="https://www.successcds.net/Entrance-Exam/Air-Force-Common-Admission-Test-AFCAT.html" target="_blank">AFCAT</a> is held twice a year,&nbsp;for grant of Short Service Commission in Flying Branch and Permanent/ Short Service Commission in Technical and Ground Duty Branches through Air Force Common Admission Test (AFCAT)&nbsp;</p>
@@ -180,9 +180,8 @@ The TANCET exam is basically divided into 4 sections like Quantitative Ability, 
 </div></p>
 </body>
 </html>
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }
 ?>
-

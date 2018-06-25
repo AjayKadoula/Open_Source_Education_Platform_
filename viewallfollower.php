@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -40,7 +40,7 @@ body{
 	margin:auto;
 }
 
-.display{	
+.display{
 	display:flex;
 	justify-content:space-around;
 	flex-wrap:wrap;
@@ -62,20 +62,20 @@ body{
 	border-radius:4px;
 	box-shadow:$shadow;
 	background-color:white;
-	position:relative;	
-	display: -webkit-box; 
+	position:relative;
+	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
-	display: -webkit-flex; 
+	display: -webkit-flex;
 	display: flex;
 	flex-direction:column;
 	.card-top{
 		-webkit-flex-basis:155px;
 		flex-basis:155px;
 		flex-shrink:1;
-		background-color:rgba(0,0,0,.2);		
+		background-color:rgba(0,0,0,.2);
 		background-position:center;
-		background-size:cover;	
+		background-size:cover;
 	}
 	.card-profile{
 		flex-basis:75px;
@@ -88,7 +88,7 @@ body{
 			top:calc(25% - 75px);
 			border:4px solid white;
 			width:150px;
-			height:150px;			
+			height:150px;
 			background-size:cover;
 			background-position:center;
 		}
@@ -98,10 +98,10 @@ body{
 		flex-grow:1;
 		padding:0 15px;
 		text-align:center;
-		display: -webkit-box; 
+		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
-		display: -webkit-flex; 
+		display: -webkit-flex;
 		display: flex;
 		flex-direction:column;
 		.info-title{
@@ -111,13 +111,13 @@ body{
 			}
 		}
 		.info-follow{
-			display: -webkit-box; 
+			display: -webkit-box;
 			display: -moz-box;
 			display: -ms-flexbox;
-			display: -webkit-flex; 
+			display: -webkit-flex;
 			display: flex;
 			padding:15px 0;
-			border-bottom:1px solid rgba(0,0,0,.3);	
+			border-bottom:1px solid rgba(0,0,0,.3);
 			font-size:1.2em;
 			>div{
 				flex-grow:1;
@@ -131,28 +131,28 @@ body{
 		.info-social{
 			flex-grow:1;
 			padding:15px 0;
-			display: -webkit-box; 
+			display: -webkit-box;
 			display: -moz-box;
 			display: -ms-flexbox;
-			display: -webkit-flex; 
+			display: -webkit-flex;
 			display: flex;
 			flex-direction:column;
 			justify-content:space-around;
 			.social-icons{
-				display: -webkit-box; 
+				display: -webkit-box;
 				display: -moz-box;
 				display: -ms-flexbox;
-				display: -webkit-flex; 
+				display: -webkit-flex;
 				display: flex;
 				justify-content:space-around;
 				.sm{
 					flex-basis:40px;
 					height:40px;
 					transition:all .3s ease-in-out;
-					display: -webkit-box; 
+					display: -webkit-box;
 					display: -moz-box;
 					display: -ms-flexbox;
-					display: -webkit-flex; 
+					display: -webkit-flex;
 					display: flex;
 					justify-content:space-around;
 					flex-direction:column;
@@ -169,7 +169,7 @@ body{
 						border-radius:4px;
 					}
 				}
-				.sm.twitter{					
+				.sm.twitter{
 					background-image: linear-gradient(transparent 50%,dodgerblue 50%)
 				}
 				.sm.facebook{
@@ -181,7 +181,7 @@ body{
 				.sm.px500{
 					background-image: linear-gradient(transparent 50%,rgba(0,0,0,.8) 50%)
 				}
-			}			
+			}
 		}
 	}
 }
@@ -213,7 +213,7 @@ body{
 	}
 }
 </style>
-</head>	
+</head>
 <body>
 <div class="container">
 	<div class="display">
@@ -244,7 +244,7 @@ body{
 						</div>
 					</div>
 					<div class="info-bio">
-						Proin non rhoncus sapien. Cras tempus odio elit, eget hendrerit neque sollicitudin at. Suspendisse feugiat nunc quis venenatis volutpat. Cras finibus sit amet velit vel dignissim. Curabitur vehicula porttitor leo a tincidunt. 
+						Proin non rhoncus sapien. Cras tempus odio elit, eget hendrerit neque sollicitudin at. Suspendisse feugiat nunc quis venenatis volutpat. Cras finibus sit amet velit vel dignissim. Curabitur vehicula porttitor leo a tincidunt.
 					</div>
 					<div class="info-social">
 						<div class="social-icons">
@@ -286,13 +286,13 @@ body{
 							<span>56</span><br />
 							<span>Following</span>
 						</div>
-						<div class="follow-likes">							
+						<div class="follow-likes">
 							<span>7532</span><br />
 							<span>Likes</span>
 						</div>
 					</div>
 					<div class="info-bio">
-						Proin non rhoncus sapien. Cras tempus odio elit, eget hendrerit neque sollicitudin at. Suspendisse feugiat nunc quis venenatis volutpat. Cras finibus sit amet velit vel dignissim. Curabitur vehicula porttitor leo a tincidunt. 
+						Proin non rhoncus sapien. Cras tempus odio elit, eget hendrerit neque sollicitudin at. Suspendisse feugiat nunc quis venenatis volutpat. Cras finibus sit amet velit vel dignissim. Curabitur vehicula porttitor leo a tincidunt.
 					</div>
 					<div class="info-social">
 						<div class="social-icons">
@@ -340,7 +340,7 @@ body{
 						</div>
 					</div>
 					<div class="info-bio">
-						Proin non rhoncus sapien. Cras tempus odio elit, eget hendrerit neque sollicitudin at. Suspendisse feugiat nunc quis venenatis volutpat. Cras finibus sit amet velit vel dignissim. Curabitur vehicula porttitor leo a tincidunt. 
+						Proin non rhoncus sapien. Cras tempus odio elit, eget hendrerit neque sollicitudin at. Suspendisse feugiat nunc quis venenatis volutpat. Cras finibus sit amet velit vel dignissim. Curabitur vehicula porttitor leo a tincidunt.
 					</div>
 					<div class="info-social">
 						<div class="social-icons">
@@ -368,7 +368,7 @@ body{
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

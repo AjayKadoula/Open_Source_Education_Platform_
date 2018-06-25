@@ -9,18 +9,18 @@ body{
 	margin-left:-8px;
 	margin-right:-8px;
 	margin-top:-8px;
-	
+
      }
 .unotes{
 	  text-decoration:none;
 	  font-size:42px;
 	  font-family:comic sans ms;
 	  color:white;
-	 
+
 	  position:relative;
 	  margin-left:120px;
 	  top:25px;
-	  
+
      }
 .login{
 	position:relative;
@@ -28,12 +28,12 @@ body{
 	right:120px;
 	top:-38px;
 	color:white;
-	
+
      }
 .forgot{
 	top:-50px;
 	text-decoration:none;
-	
+
      }
 .footer{
 	   font-family:Sans Serif;
@@ -53,7 +53,7 @@ body{
 	float:right;
 	margin-right:150px;
 	margin-top:-380px;
-	
+
        }
 .create{
 	    font-size:30px;
@@ -62,28 +62,28 @@ body{
 		font-family:lucida;
 		line-height:20px;
 		font-weight:bold;
-		
-	
+
+
 }
 
 .p1  {
 	font-size:25px;
 	position:relative;
 	margin-left:340px;
-	
-	
-	
+
+
+
      }
 .p2  {
-	
+
 	position:relative;
 	margin-left:340px;
-	
-	
-	
+
+
+
      }
 .img{
-	
+
 	position:relative;
 	margin-left:156px;
 }
@@ -93,18 +93,18 @@ body{
 .p4{
 	position:relative;
 	margin-left:80px;
-	
+
 	margin-top:2px;
 	float:left;
-	
+
 }
 .name{
-	
+
 	float:right;
-	
+
 	margin-right:80px;
 	margin-top:-20px;
-	
+
 
 }
 .error{
@@ -114,7 +114,7 @@ body{
 	top:5px;
 	color:red;
 	text-decoration:underline;
-	
+
 }
 
 .button {
@@ -164,11 +164,11 @@ display: inline-block;
 	top:158px;
 	color:red;
 	text-decoration:underline;
-	
+
 }
 input[type=text]{
-    
-    
+
+
     margin: 8px 0;
     display: inline-block;
     border: 1px solid blue;
@@ -178,8 +178,8 @@ input[type=text]{
 	font-family:Serif;
 }
 input[type=password]{
-    
-    
+
+
     margin: 8px 0;
     display: inline-block;
     border: 1px solid blue;
@@ -188,8 +188,8 @@ input[type=password]{
 	font-size:15px;
 }
 input[type=email]{
-    
-    
+
+
     margin: 8px 0;
     display: inline-block;
     border: 1px solid blue;
@@ -198,12 +198,12 @@ input[type=email]{
 	font-size:14px;
 }
 input[type=submit]{
-    
-  
+
+
    cursor:pointer;
     display: inline-block;
     border: 1px solid white;
 	border-radius: 4px;
     box-sizing: border-box;
-   
+
 }

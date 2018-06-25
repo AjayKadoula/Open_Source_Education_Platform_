@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 ?>
 <!DOCTYPE html>
@@ -12,8 +12,8 @@ include './bar\navigation_bar.php';
 <style>
 .body{
 	max-width:1150px;
-	
-	
+
+
 }
 .banner h1 {
 	color:#fff;
@@ -262,7 +262,7 @@ p.post-terms a {
     border-bottom: 3px solid #F4F4F4;
 }
 body{
-	
+
 	background-image: url("https://st2.depositphotos.com/1280399/6228/i/950/depositphotos_62289735-stock-photo-white-background-smooth-metal-texture.jpg");
 }
 .banner {
@@ -278,29 +278,29 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 </style>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <!--fonts-->
 <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<!--//fonts-->	
+<!--//fonts-->
 
 </head>
 <body>
 
-	<center>	
+	<center>
 	<div class="body">
 			<h2 class="head">Post an Ad</h2><hr>
 	<div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1>Sell or Advertise   <span class="segment-heading">    anything online </span> with Unotes</h1>
 			<p>#############################################</p>
 			<a href="home.php">Go to Home</a>
@@ -310,7 +310,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="submit-ad main-grid-border">
 		<div class="container">
 			<div class="post-ad-form">
-				
+
 			    <form id="upload" action="post_ad_function.php" method="POST" enctype="multipart/form-data">
 					<label>Select Category <span>*</span></label>
 					<select name="category" class="">
@@ -325,7 +325,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<label>Ad Title <span>*</span></label>
 					<input type="text" name="title" class="phone" placeholder="">
 					<div class="clearfix"></div>
-					
+
 					<label>Price <span>*</span></label>
 					<input type="number" name="price" class="phone" placeholder="">
 					<div class="clearfix"></div>
@@ -333,7 +333,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<textarea class="mess" name="description" placeholder="Write few lines about your product"></textarea>
 					<div class="clearfix"></div>
 				<div class="upload-ad-photos">
-				<label>Photos for your ad :</label>	
+				<label>Photos for your ad :</label>
 					<div class="photos-upload-view">
 
 						<input type="hidden" name="post_image" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
@@ -347,8 +347,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<button type="submit" name="post_image">Upload Files</button>
 						</div>
 
-						
-            
+
+
 						<div id="messages">
 						<p>Status Messages</p>
 						</div>
@@ -357,11 +357,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<script src="js/filedrag.js"></script>
 				</div>
 					<div class="personal-details">
-					
+
 						<label>Your Name <span>*</span></label>
 						<input type="text" name="name" class="name" placeholder="">
 						<div class="clearfix"></div>
-						
+
 					<label>Your City <span>*</span></label>
 					<input type="text" name="city" class="phone" placeholder="">
 					<div class="clearfix"></div>
@@ -372,19 +372,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<input type="text" name="email" class="email" placeholder="">
 						<div class="clearfix"></div>
 						<p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.html" target="_blank">Terms of Use </a> and <a href="privacy.html" target="_blank">Privacy Policy</a></p>
-					<input type="submit"  name="post" value="Post">					
+					<input type="submit"  name="post" value="Post">
 					<div class="clearfix"></div>
 					</form>
 					</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 	</div>
 
 </body>
 </html>
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

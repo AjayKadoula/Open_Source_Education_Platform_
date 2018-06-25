@@ -7,22 +7,22 @@
 <link rel="stylesheet" href="homepage.css" type="text/css">
 <link rel="stylesheet" href="css\popup.css" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" 
+<script type="text/javascript"
     src="http://ajax.microsoft.com/ajax/jquery.ui/1.8.5/jquery-ui.min.js">
 </script>
 <script src="jquery\home.js">
 
-   
+
 </script>
 <script src="jquery\popup.js">
-   
+
 </script>
- 
+
 </head>
 <body>
 <div style="display:none;">jai MEERA baba jai JANKHA peer</div>
 <div>
-<div class="error"><?php 
+<div class="error"><?php
    if(isset($_GET["id"])){
 	   echo"<div id='".$_GET["id"]."'>".$_GET["v"]."</div>";
    }
@@ -30,7 +30,7 @@
 </div>
 
 
-<div class="errorr"><?php 
+<div class="errorr"><?php
    if(isset($_GET["class"])){
 	   echo"<div class='".$_GET["class"]."' >".$_GET["e"]."</div>";
    }
@@ -45,7 +45,7 @@ Unotes.in
 <div>
 <form class="login" entype="multipart/form-data" method="post" action="auth.php">
 <table>
-<tr> 
+<tr>
 <td>Username</td>
 <td>Password</td>
 </tr>
@@ -77,13 +77,14 @@ Unotes.in
 <input type="text" name="sname" maxlength="10" placeholder="SurName" > </td>
 <tr><td><input type="email" name="email"  placeholder="E-Mail id"  ></td></tr>
 <td><input type="text" name="username" min="10" maxlength="10" placeholder="+91" pattern="^\d{10}$" title="eg:987654321X"> </td>
-<tr><td><input name="password" placeholder="create your password" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" />
+<tr><td><input name="password" id="password" placeholder="create your password" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" />
 <span id="password_strength"></span> </td></tr>
+<tr><td><input type="password" placeholder="Confirm Password" id="confirm_password" required></td></tr>
 <tr>
 <td><strong>Your City/Your Institute</strong><br><input name="date" type="text" /><br><a href="#"class="p3" >
 <div class="popup" onclick="myFunction()">
   Why do I need to provide my<span> city/institute?</span><span class="popuptext" id="myPopup">
-  Providing your city/institute helps make sure that you get the right Unotes.in experience for your area. 
+  Providing your city/institute helps make sure that you get the right Unotes.in experience for your area.
   please visit our Data Policy.</span></a></td></div>
 </tr></tr></tr>
 <tr><td>
@@ -96,7 +97,21 @@ Unotes.in
 <td><button class="button"  style="vertical-align:middle" name="signup"  ><span>Create An Account</span></button></td>
 </table>
 </form>
+<script>
+var password = document.getElementById("password")
+, confirm_password = document.getElementById("confirm_password");
 
+function validatePassword(){
+if(password.value != confirm_password.value) {
+  confirm_password.setCustomValidity("Passwords Don't Match");
+} else {
+  confirm_password.setCustomValidity('');
+}
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
 
 </div>
 </div>

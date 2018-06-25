@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 
 
@@ -19,10 +19,10 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 
@@ -81,7 +81,7 @@ body{
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
-	
+
 }
 </style>
 </head>
@@ -90,12 +90,12 @@ body{
     <div  style="max-width:80%;">
 	<h1>Career</h1><hr>
 	<div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1 style="margin-top:-20px;">Share Exams Papers & <span class="segment-heading">Exams Notes  </span> With Unotes</h1>
 			<p>****************************************************************</p>
 			<div style="margin-top:-10px;"><a href="home.php">Go to Home</a></div>
 	  </div>
-	  
+
 </div><br><hr><br><br><br>
 <div class="body"><br><br>
 <a href="exam_directory.php"><div >Career Counsellor	</div></a>
@@ -104,7 +104,7 @@ body{
 <a href="#"><div>EARN WITH LEARN</div></a>
 
 </div>
-	
+
 
 <br><br>
 
@@ -114,7 +114,7 @@ body{
  </body>
 </html>
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

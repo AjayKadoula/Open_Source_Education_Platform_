@@ -7,10 +7,24 @@
 	margin-top:40px;
 }
 
+.follow {
 
+    color: #00b5ff;
+		border-radius: 40px;
+    border: 2px solid lightblue;
+		letter-spacing: 1px;
+		font:  'Oswald', Arial, sans-serif;
+}
+
+.follow:hover {
+   	background-image: linear-gradient(to right, #00b5ff 0%, lightblue 100%);
+    background-color:#00b5ff;
+    width:102%;
+    color: white;
+}
 
 body{
-	
+
   background-color:rgb(250, 250, 250);
 	margin-top:70px;
 }
@@ -20,25 +34,25 @@ body{
   background-color:white;
   border-radius:20px;
   border: 1px solid blue;
-  
+
    font-family:serif;
-	   font-size:20px;
-	
+	   font-size:24px;
+
 		z-index:2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   float:left;
   margin-left:200px;
   margin-top:-55px;
- 
+
     transition: all ease-in-out 250ms;
 	position:fixed;
-	  
-    
+
+
 }
 .lef img{
 	border: 1px solid blue;
 	  border-radius: 50%;
-	 
+
 	  text-align:center;
 	   border-radius: 1000px !important;
     overflow: hidden;
@@ -46,7 +60,7 @@ body{
     height: 90px;
     border: 8px solid rgba(143, 160, 142, 0.3);
     position: relative;
-    margin-top: 50px;
+    margin-top: 40px;
 	margin-left:20px;
 	position:relative;
 }
@@ -59,7 +73,7 @@ body{
   color: #000000;
 }
 .left_profile{
-	
+
 	position:relative;
 	margin-left:150px;
 	margin-top:-170px;
@@ -69,38 +83,34 @@ body{
   min-height: 400px;
   background-color:white;
   color:black;
-  
-   font-family:vardana,arial,felvetica;
-	   font-size:20px;
-	
+  font-family:vardana,arial,felvetica;
+	font-size:20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
-  border: 1px solid blue;
+	border: 1px solid blue;
   font-family: 'Century Gothic',sans-serif;
-    transition: all ease-in-out 250ms;
-	 border-radius:2%;
-	  
-    
+  transition: all ease-in-out 250ms;
+	border-radius:2%;
+
+
 }
 .left1{
   width:19.5%;
   background-color:white;
   position:absolute;
-   font-family:vardana,arial,felvetica;
-	   font-size:20px;
-	
+	font-size:25px;
+
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
   float: left;
   margin-left:200px;
   margin-top:150px;
-  font-family: Century Gothic,sans-serif;
+  font-family: 'Mrs Saint Delafield', cursive;
     transition: all ease-in-out 250ms;
 
 	  border: 1px solid blue;
 	   border-radius:2%;
-	  
-    
+
+
 }
 hr {
     display: block;
@@ -108,7 +118,7 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 
 .news_list {
@@ -134,13 +144,13 @@ outline: 0;
     text-align: center;
 }
 .lefbutton a{
-	 
+
 	   display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
 	border: 1px solid white;
-	
+
 	font-family:Times New Roman,serif;
 }
 .lefbutton a:hover{
@@ -149,16 +159,16 @@ outline: 0;
 	opacity:0.95;
 	border: 1px solid blue;
 	font-size:25px;
-	
+
 	font-family:Georgia;
 
-	
+
 }
 .banner {
 	background:url('img/banner.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:195px;
-	
+
 	padding:45px 0 0 0;
 }
 
@@ -170,7 +180,7 @@ outline: 0;
 }
 .banner p {
     color: #fff;
-    
+
     font-size: 15px;
 }
 .banner a {
@@ -178,17 +188,17 @@ outline: 0;
     color: white;
     font-size: 17px;
     background-color: #00b5ff;
-    
+
 }
 .banner a:hover {
 	background:blue;
 }
 .menu{
-	 
+
 	   display: block;
-   
+
     padding: 8px 16px;
-    
+
 	font-family:Georgia;
 }
 /* LIST VIEW */
@@ -224,13 +234,13 @@ outline: 0;
 }
  ul.list li.alt{ background:gray; }
  .list li p {
-	
+
     overflow: hidden;
     word-wrap: break-word;
     color: #C1C1C1;
     font-size: 18px;
 	margin-left:15px;
-   
+
 }
  .list li .title{
 	 text-align:center;
@@ -244,26 +254,13 @@ outline: 0;
     letter-spacing: 1px;
 }
  .list li .adprice{
-	
+
 	display: block;
     font-size: 32px;
     color: #ACD3F7;
     margin: 5px 0 0 0;
 }
-.adprice {
-	cursor:pointer;
-    display: block;
-    font-size: 32px;
-    color: rgba(1, 161, 133, 0.57);
-    margin: 5px 0 0 0;
-}
-.adprice :hover {
-	cursor:pointer;
-    display: block;
-    font-size: 32.5px;
-    color: rgba(1, 161, 133, 0.57);
-    margin: 5px 0 0 0;
-}
+
  .list li .list-left {
     width: 60%;
     margin-left: 3%;
@@ -311,5 +308,3 @@ body {
 
 
 }
-
-

@@ -1,13 +1,13 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 include './post.php';
 $username= $_SESSION["user_name"];
 
 ?>
 
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -15,15 +15,15 @@ $username= $_SESSION["user_name"];
 <title> profile</title>
 <link rel="stylesheet" href="home.css" type="text/css">
 <link rel="stylesheet" href="css\post.css" type="text/css">
-  
-	
+
+
 </head>
 <body >
 <div style="display:none;">jai MEERA baba jai JANKHA peer</div>
 <div >
 <center >
 <div class="banner text-center" style="width:32%;  border-radius:2%; margin-left:34%; margin-top:-54px; position:absolute;  border: 1px solid blue;   z-index:20;">
-	  <div >    
+	  <div >
 			<h1>Welcome to the <span class="segment-heading"> online knowledge </span> center.</h1>
 			<p>“Learning gives creativity
 Creativity leads to thinking
@@ -34,7 +34,7 @@ Knowledge makes you great.” <br>
 	  </div>
 </div>
 </center>
-<div > 
+<div >
 
  <div style="
   width:19.5%; z-index:2; opacity:0.9;
@@ -82,32 +82,34 @@ Knowledge makes you great.” <br>
 <div class='right' ><center>
 
 <div style="font-family:Georgia; " ><b style="font-family:Georgia; text-decoration: underline;">Who to follow- </b>  <a href="viewallfollower.php">view all</a></div>
-       </center><br> <ul class="list">		
+       </center><br> <ul class="list">
 		<?php
-							
+		         foreach($followeralready as $rowfollow){
+						 $row21=$rowfollow['follower_id'];
+
 							foreach($followerlist as $row2){
 							//fetching all posts
-							
 							$id2 = $row2['user_id'];
-						echo '
-						
+							$id2=$row21;
+						}}
+					   	echo '
+
 									<li>
 									<img src="profile_image/'.$row2['profile_image'].'" title="" alt="" />
 									<section class="list-left">
-				<a href="userprofile.php? username='.$row2['user_name'].'"><h5 class="title">'.$row2['fname'].'  '.$row2['sname'].'</h5></a>
+				          <a href="userprofile.php? username='.$row2['user_name'].'"><h5 class="title">'.$row2['fname'].'  '.$row2['sname'].'</h5></a>
 									<p class="catpath">'.$row2['user_gender'].'</p>
 									<span class="cityname">'.$row2['user_dob'].' </span>
-									<span class="adprice"><a href="#">Follow</a></span>
-									
+									<span class="adprice"  ><button   data-page="2" rel="'.$row2['user_id'].'" class="follow">Follow</a></span>
 									</section>
 									<section class="list-right">
-									
+
 									</section>
 									<div class="clearfix"></div>
-									</li> 
-								
-						<br> ';	
-					}	
+									</li>
+
+						<br> ';
+
 				?>
 				</ul>
 </div>
@@ -119,10 +121,10 @@ Knowledge makes you great.” <br>
 
 </div><center><br>
 <div class="box">
-   
-   
-   
-   <div class="wrapper"  >		
+
+
+
+   <div class="wrapper"  >
 		<!--content -->
 		<div class="content">
 			<!--left-content-->
@@ -132,12 +134,12 @@ Knowledge makes you great.” <br>
  					<form action="post1.php" method="post" enctype="multipart/form-data">
 						<div class="c-header">
 							<div class="c-h-inner" >
-								<ul>	
+								<ul>
 									<li style="border-right:none; color: rgb(59, 89, 152);"><img src="img/1.png"></img>Any query</li>
 									<li style="border: none; color: rgb(59, 89, 152);"><img src="img/icon1.png"></img>Any idea/Thoughts</li>
 									<li><input type="file"  onchange="readURL(this);" style="display:none;" name="post_image" id="uploadFile"></li>
 									<li><img src="img/icon2.png"></img><a href="#" id="uploadTrigger" name="post_image">Add Photos</a></li>
-									
+
 								</ul>
 							</div>
 						</div>
@@ -145,7 +147,7 @@ Knowledge makes you great.” <br>
 							<div class="body-left">
 								<div class="imgbox">
 									<img src="profile_image/<?php echo $_SESSION["profile_image"] ;  ?>"></img>
-									
+
 								</div>
 							</div>
 							<div class="body-right">
@@ -162,7 +164,7 @@ Knowledge makes you great.” <br>
 									<li><input type="submit" name="submit" value="Ask" class="btn2"/></li>
 								</ul>
 							</div>
-								
+
 							</div>
 						</div><br>
 						</div>
@@ -179,7 +181,7 @@ Knowledge makes you great.” <br>
 											if(avatarok == 1) {
 						                	$('#body-bottom').show();
 						                    $('#preview').attr('src', e.target.result);
-											
+
 						                }}
 
 						                reader.readAsDataURL(input.files[0]);
@@ -214,12 +216,12 @@ Knowledge makes you great.” <br>
 							//fetching all posts
 							$time_ago = $row['status_time'];
 						echo '
-						
+
 						<div class="post-show">
 									<div class="post-show-inner"><div class="id-img-box" style="margin-left:10px;"><img src="profile_image/'.$row['profile_image'].'"></img></div><br>
 										<div class="post-header">
 											<div class="post-left-box">
-												
+
 												<div class="id-name">
 													<ul>
 														<li style="text-transform:Capitalize; margin-top:-20px;"><a href="#">'.$row['fname']." ".$row['sname'].'</a></li>
@@ -229,7 +231,7 @@ Knowledge makes you great.” <br>
 											</div>
 											<div class="post-right-box"></div>
 										</div>
-									
+
 											<div class="post-body" style="display:inline;">
 										    <div style="position:relative;  padding:10px; background-color:#f4f5f7;" >
 											<p style="font-family: inherit;">'.$row['query'].'</p>
@@ -241,20 +243,21 @@ Knowledge makes you great.” <br>
 														<li><a href="#"> Like</a></li>
 														<li ><a href="#" class="comment" > Answer </a></li>
 														<li><a href="#">Share</a></li>
-													</ul>	
+													</ul>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div><br> ';	
-					}	
+								</div><br> ';
+					}
 				?>
 					</div>
-					</form>	
-													
+					</form>
+
 			</div>
 
- 
+
+
 
 </div>
 
@@ -288,6 +291,27 @@ $(document).on('click','.loadmore',function () {
    });
 });
 
+$(document).on('click','.follow',function () {
+  $(this).text('following');
+	  var follow_id = $(this).attr("rel");
+    var ele = $(this).parent('.adprice');
+        $.ajax({
+      url: 'follow.php',
+      type: 'POST',
+      data: {
+              page:$(this).data('page'),follow_id:follow_id,
+            },
+      success: function(response){
+           if(response){
+             ele.hide();
+                $(".list").append(response);
+              }
+            }
+   });
+});
+
+
+
 
 
 
@@ -301,12 +325,8 @@ $(document).on('click','.loadmore',function () {
 
 </body>
 </html>
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }
 ?>
-
-
-
-

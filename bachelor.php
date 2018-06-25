@@ -1,21 +1,21 @@
 
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include 'bar\navigation_bar.php';
 include 'post2.php';
-	
-         
-     
+
+
+
 	   $_SESSION["branch"] = $_GET["branch"];
 	     $row1=$_SESSION["branch"];
-       
 
 
 
- 
+
+
 ?>
-	
+
 <!doctype html>
 <html lang="eng">
 <head>
@@ -25,7 +25,7 @@ include 'post2.php';
 
 
 
-	
+
 	<style>
 .dropbtn {
 	height:100px;
@@ -52,7 +52,7 @@ include 'post2.php';
 }
 
 .dropdown-content {
-	
+
     display: none;
     position: absolute;
     background-color: white;
@@ -86,7 +86,7 @@ include 'post2.php';
 
 .show {display:block;}
 body{
-	
+
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIXqs81nYwzSqqIykOqY56RMBQ-QmK_EB5dMqyyX67yzlJLXH");
 }
 .banner {
@@ -135,10 +135,10 @@ padding: 0;}
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 ">
 <div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1 style="margin-top:-20px;">Share  Your <span class="segment-heading">Institute Notes  </span> With Unotes</h1>
 			<p>“Here, class attendance is expected and students are required to take notes, which they are tested on. What is missing, it seems to me, is the use of knowledge, the practical training.” <br>
 ― Harrison Salisbury</p>
@@ -153,19 +153,19 @@ padding: 0;}
     padding: 0; ">
 <div style=" border: 1px solid blue;">
      <?php
-	 
-							
+
+
 							foreach($bachelor as $row){
 							//fetching all posts
-							
+
 							$course = $row['course'];
 							$institute = $row['name'];
 							if($course==$row1){
 						echo '
 						 <div id="form" >
              <hr>
-		  
-		  
+
+
 		  <form action="'.$row['url'].'">
 		  <div class="dropdown">
            <button  class="dropbtn"><h3>'.$row['name'].'</button></h3></form>
@@ -173,15 +173,15 @@ padding: 0;}
             <a href="notespdf.php?institute='.$institute.'& branch='.$course.'_first_year_'.$institute.'">First Year</a>
              <a href="notespdf.php?institute='.$institute.'& branch='.$course.'_second_year_'.$institute.'">Second Year</a>
             <a href="notespdf.php?institute='.$institute.'& branch='.$course.'_third_year_'.$institute.'">Third Year</a>
-			
+
             <a href="notespdf.php?institute='.$institute.'& branch='.$course.'_fourth_year_'.$institute.'">Fourth Year</a>
             </div>
              </div>
-			 
-						 <hr>';	
+
+						 <hr>';
 							}}
 				?>
-			
+
 </div>
 </div>
 
@@ -192,7 +192,7 @@ padding: 0;}
 
 
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }

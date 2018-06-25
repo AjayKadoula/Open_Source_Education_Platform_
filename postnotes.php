@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
+if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 $institute=$_GET["institute"];
 $_SESSION["branch"] = $_GET["branch"];
@@ -14,8 +14,8 @@ $_SESSION["branch"] = $_GET["branch"];
 <style>
 .body{
 	max-width:1150px;
-	
-	
+
+
 }
 .banner h1 {
 	color:#fff;
@@ -264,7 +264,7 @@ p.post-terms a {
     border-bottom: 3px solid #F4F4F4;
 }
 body{
-	
+
 	background-image: url("https://st2.depositphotos.com/1280399/6228/i/950/depositphotos_62289735-stock-photo-white-background-smooth-metal-texture.jpg");
 }
 .banner {
@@ -280,7 +280,7 @@ hr {
     border: 0;
     border-top: 1px solid blue;
     margin: 1em 0;
-    padding: 0; 
+    padding: 0;
 }
 </style>
 <!-- for-mobile-apps -->
@@ -290,11 +290,11 @@ hr {
 </head>
 <body>
 
-	<center>	
+	<center>
 	<div class="body">
 			<h2 class="head">Post Your Notes</h2><hr>
 	<div class="banner text-center">
-	  <div class="container">    
+	  <div class="container">
 			<h1>Post Your<span class="segment-heading">     Notes online </span> with Unotes</h1>
 			<p>#############################################</p>
 			<a href="home.php">Go to Home</a>
@@ -304,18 +304,18 @@ hr {
 	<div class="submit-ad main-grid-border">
 		<div class="container">
 			<div class="post-ad-form">
-				
+
 			    <form id="upload"  action="postnotesfunction.php?branch=<?php echo $_SESSION["branch"];?>" method="POST" enctype="multipart/form-data">
 					<label> Subject Name <span>*</span></label>
 
 					<input type="text" readonly="readonly" name="subject" Value="<?php echo $_GET["branch"];?>"   placeholder="subject name">
 					<div class="clearfix"></div>
-					
+
 					<label>Description <span>*</span></label>
 					<textarea class="mess" name="description" value="10" placeholder="Write 2-3 lines about your Notes"></textarea>
 					<div class="clearfix"></div>
 				<div class="upload-ad-photos">
-				<label>Only PDF file upload :</label>	
+				<label>Only PDF file upload :</label>
 					<div class="photos-upload-view">
 
 						<input type="hidden" name="post_image" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
@@ -329,8 +329,8 @@ hr {
 							<button type="submit"  name="post_image">Upload Files</button>
 						</div>
 
-						
-            
+
+
 						<div id="messages">
 						<p>Status Messages</p>
 						</div>
@@ -339,11 +339,11 @@ hr {
 						<script src="js/filedrag.js"></script>
 				</div>
 					<div class="personal-details">
-					
+
 						<label>Your Name <span>*</span></label>
 						<input type="text" Value="<?php echo $_SESSION["user"];?>" name="name" class="name" placeholder="">
 						<div class="clearfix"></div>
-						
+
 					<label>Your Institute <span>*</span></label>
 					<input type="text" name="institute" value="<?php echo $institute;?>" class="phone" placeholder="">
 					<div class="clearfix"></div>
@@ -354,13 +354,13 @@ hr {
 						<input type="text" name="email" Value="<?php echo $_SESSION["user_email"];?>" class="email" placeholder="">
 						<div class="clearfix"></div>
 						<p class="post-terms">By clicking <strong>post Button</strong> Your Notes will be Uploaded</p>
-					<input type="submit" id="uploadTrigger"  name="postnotes" value="Post">					
+					<input type="submit" id="uploadTrigger"  name="postnotes" value="Post">
 					<div class="clearfix"></div>
 
 					</form>
 					</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 	</div>
 
@@ -368,7 +368,7 @@ hr {
 </body>
 </html>
 
-<?php	
+<?php
 
 }else { header("Location:index.php");
 }
