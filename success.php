@@ -53,7 +53,7 @@ Unotes.in
 
 <div >
 
-  <textarea class="objective" id="text" name="image_text" placeholder="Write Your objective/ Some positive quotes........."></textarea><br>
+  <textarea class="objective" id="text" name="image_text" placeholder="Tell Me About yourself..."></textarea><br>
    <button type="submit" name="submit" class="enter"><span>Enter to website</span>
 </form>
       </div>

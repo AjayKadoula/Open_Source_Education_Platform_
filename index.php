@@ -50,8 +50,8 @@ Unotes.in
 <td>Password</td>
 </tr>
 <tr>
-<td><input type="text" name="username"  maxlength="10"  placeholder="+91" pattern="^\d{10}$"> </td>
-<td><input type="password" name="password"  minlength="4" > </td>
+<td><input type="text" name="username"  maxlength="10"  placeholder="+91" style="height:25px;" pattern="^\d{10}$"> </td>
+<td><input type="password" name="password"  minlength="4" style="height:25px;" > </td>
 <td><input type="submit" name="submit" value="Log In"> </td>
 </tr>
 <td><div style="margin-top:-10px; margin-left:10px;"><a href="forgotten_password.php" class="forgot">forgotten Password ?</a></div></td>
@@ -73,15 +73,15 @@ Unotes.in
 <tr>
 <td><p class="create">CREATE AN ACCOUNT</p></td>
 
-<tr class="Fname"><td><input type="text" name="fname"  maxlength="10" placeholder="First Name"  > &nbsp;
-<input type="text" name="sname" maxlength="10" placeholder="SurName" > </td>
-<tr><td><input type="email" name="email"  placeholder="E-Mail id"  ></td></tr>
-<td><input type="text" name="username" min="10" maxlength="10" placeholder="+91" pattern="^\d{10}$" title="eg:987654321X"> </td>
-<tr><td><input name="password" id="password" placeholder="create your password" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" />
+<tr class="Fname"><td><input style="height:25px;" type="text" name="fname"  maxlength="10" placeholder="First Name"  > &nbsp;
+<input type="text" style="height:25px;" name="sname" maxlength="10" placeholder="SurName" > </td>
+<tr><td><input type="email" style="height:25px;" name="email"  placeholder="E-Mail id"  ></td></tr>
+<td><input type="text" style="height:25px;" name="username" min="10" maxlength="10" placeholder="+91" pattern="^\d{10}$" title="eg:987654321X"> </td>
+<tr><td><input name="password" style="height:25px;" id="password" placeholder="create your password" type="password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" />
 <span id="password_strength"></span> </td></tr>
-<tr><td><input type="password" placeholder="Confirm Password" id="confirm_password" required></td></tr>
+<tr><td><input type="password" style="height:25px;" placeholder="Confirm Password" id="confirm_password" required></td></tr>
 <tr>
-<td><strong>Your City/Your Institute</strong><br><input name="date" type="text" /><br><a href="#"class="p3" >
+<td><strong>Your City/Your Institute</strong><br><input style="height:25px;" name="date" type="text" placeholder="City/Institute" /><br><a href="#"class="p3" >
 <div class="popup" onclick="myFunction()">
   Why do I need to provide my<span> city/institute?</span><span class="popuptext" id="myPopup">
   Providing your city/institute helps make sure that you get the right Unotes.in experience for your area.

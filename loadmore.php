@@ -1,11 +1,9 @@
 <?php include('db.php');
    include('post.php');
- ?>
-<?php
     if(isset($_POST['page'])):
     $paged=$_POST['page'];
-    $sql="SELECT * FROM `posts`,`users` where user_name = user_id_p ORDER BY `post_id` DESC";
-	
+    $sql="SELECT * FROM `posts`,`users`,`following` where user_name = user_id_p and `users`.user_id=follower_id    ORDER BY  `status_time` DESC";
+
     if($paged>0){
            $page_limit=$resultsPerPage*($paged-1);
            $pagination_sql=" LIMIT  $page_limit, $resultsPerPage";
@@ -18,13 +16,13 @@
     $num_rows = mysqli_num_rows($result);
     if($num_rows>0){
     while($row=mysqli_fetch_array($result)){
- 
+
 	$time_ago = $row['status_time'];
     echo '<li style="margin-left:-15px;">	<div class="post-show">
 									<div class="post-show-inner"><div class="id-img-box"><img src="profile_image/'.$row['profile_image'].'"></img></div><br>
 										<div class="post-header">
 											<div class="post-left-box">
-												
+
 												<div class="id-name">
 													<ul>
 														<li><a href="#">'.$row['fname']." ".$row['sname'].'</a></li>
@@ -34,10 +32,10 @@
 											</div>
 											<div class="post-right-box"></div>
 										</div>
-									
+
 											<div class="post-body">
 											<div class="post-header-text">
-	                                        '.substr($row['query'],0,500).'
+	                                      <p>  '.substr($row['query'],0,500).'</p>
 											</div>'.( ($row['status_image'] != 'NULL') ? '<div class="post-img">
 												<img src="images/posts/'.$row['status_image'].'"></img></div>' : '').'
 											<div class="post-footer">
@@ -46,7 +44,7 @@
 														<li><a href="#"> Like</a></li>
 														<li><a href="comment.php">Comment</a></li>
 														<li><a href="#">Share</a></li>
-													</ul>	
+													</ul>
 												</div>
 											</div>
 										</div>

@@ -12,13 +12,15 @@
    	//fetching user data by user_id
 	$data  = $get->user_data($user_id);
 	// fetching posts from database
-	$post  = $get->posts();
+	$post  = $get->posts($id);
 
 	// fetching posts from database
 	$adpost  = $get->adposts();
 	//check user submit  data
 	$followerlist  = $get->followerlist();
+	$followerlistall  = $get->followerlistall();
 	$followeralready = $get->followeralready($id);
+	
 
 
 

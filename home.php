@@ -85,13 +85,17 @@ Knowledge makes you great.” <br>
        </center><br> <ul class="list">
 		<?php
 		         foreach($followeralready as $rowfollow){
-						 $row21=$rowfollow['follower_id'];
+
+						$session['row21']=$rowfollow['follower_id'];
+            $row21=$session['row21'];
+						echo $row21;
+						 }
+
 
 							foreach($followerlist as $row2){
 							//fetching all posts
 							$id2 = $row2['user_id'];
-							$id2=$row21;
-						}}
+
 					   	echo '
 
 									<li>
@@ -109,7 +113,7 @@ Knowledge makes you great.” <br>
 									</li>
 
 						<br> ';
-
+					}
 				?>
 				</ul>
 </div>
@@ -262,11 +266,19 @@ Knowledge makes you great.” <br>
 </div>
 
 
-<ul class="news_list">
 
-<li class="loadbutton"><button class="loadmore" data-page="2">Load More</button></li>
-</ul>
-</div>
+</div><?php
+if($post != ""){?>
+	<ul class="news_list">
+
+	<li class="loadbutton"><button class="loadmore" data-page="2">Load More</button></li>
+	</ul>
+<?php
+}else{
+echo "<li>No More Feeds</li>";
+}
+
+?>
 </center>
 
 </div>

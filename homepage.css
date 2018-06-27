@@ -172,7 +172,7 @@ input[type=text]{
     margin: 8px 0;
     display: inline-block;
     border: 1px solid blue;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
 	font-size:15px;
 	font-family:Serif;
@@ -183,7 +183,7 @@ input[type=password]{
     margin: 8px 0;
     display: inline-block;
     border: 1px solid blue;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
 	font-size:15px;
 }
@@ -193,7 +193,7 @@ input[type=email]{
     margin: 8px 0;
     display: inline-block;
     border: 1px solid blue;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
 	font-size:14px;
 }
