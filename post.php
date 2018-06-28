@@ -5,11 +5,11 @@
 	$check  = new Main;
 	$get    = new Main;
 	$send   = new Main;
-   @$user_id = $_SESSION['user_name'];
-	 @$id = $_SESSION['user_id'];
+  @$user_id = $_SESSION['user_name'];
+ 	@$id = $_SESSION['user_id'];
 
 
-   	//fetching user data by user_id
+   //fetching user data by user_id
 	$data  = $get->user_data($user_id);
 	// fetching posts from database
 	$post  = $get->posts($id);
@@ -19,8 +19,10 @@
 	//check user submit  data
 	$followerlist  = $get->followerlist();
 	$followerlistall  = $get->followerlistall();
-	$followeralready = $get->followeralready($id);
-	
+	$followerCount  = $get->followerCount($id);
+	$followingCount  = $get->followingCount($id);
+	$postsCount= $get->postsCount($user_id);
+
 
 
 

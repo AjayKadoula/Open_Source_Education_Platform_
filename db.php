@@ -58,21 +58,24 @@ function news_feed($connectionStatus,$resultsPerPage)
   }
 
 }
-
-
-
-
-
-function profile_image($connectionStatus,$username)
+function Status($connectionStatus,$username)
 {
-	$query="(UPDATE users SET `profile_image` = '$imagename', `image_text` = '$image_text' WHERE user_name like '$username')";
+	$query="UPDATE users SET `Status` = 'Active' WHERE user_name like '$username'";
 	$result=mysqli_query($connectionStatus,$query);
-	if(mysqli_affected_rows($connectionStatus)== 1){
+	if($result){
 		return true;
 	}
 	return false;
 }
-
+function StatusInactive($connectionStatus,$username)
+{
+	$query="UPDATE users SET `Status` = 'Inactive' WHERE user_name like '$username'";
+	$result=mysqli_query($connectionStatus,$query);
+	if($result){
+		return true;
+	}
+	return false;
+}
 function post_ad($connectionStatus,$category,$title,$price,$description,$ad_image,$name,$city,$mobile,$email)
 {
 

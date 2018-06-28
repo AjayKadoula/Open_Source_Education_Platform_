@@ -25,11 +25,11 @@ $username= $_SESSION["user_name"];
 <div class="banner text-center" style="width:32%;  border-radius:2%; margin-left:34%; margin-top:-54px; position:absolute;  border: 1px solid blue;   z-index:20;">
 	  <div >
 			<h1>Welcome to the <span class="segment-heading"> online knowledge </span> center.</h1>
-			<p>“Learning gives creativity
+		<i>	<p><b>“Learning gives creativity
 Creativity leads to thinking
 Thinking provides knowledge
 Knowledge makes you great.” <br>
-― A.P.J. Abdul Kalam</p>
+― A.P.J. Abdul Kalam</p></i>
 			<a href="post-ad.html">Your feedback</a>
 	  </div>
 </div>
@@ -42,35 +42,35 @@ Knowledge makes you great.” <br>
 <div class='lef'>
 <img src="profile_image/<?php echo $_SESSION["profile_image"] ;   ?>" alt="" class="box-img"></img>
 <div class="left_profile">
-          <br> <br><div class="nam" style="text-transform:capitalize;"> <?php echo $_SESSION["user"];   ?></div><hr>
-						<div class=" share">
+</b><br> <br><div class="nam" style="text-transform:capitalize;"> <?php echo $_SESSION["user"];   ?></div><hr><b>
+						<div class=" share" style="margin-top:-20px;">
 							<h5>
-								<small style="font-size:15px;">Sharing:</small>
-								<a href="#">#</a>
+								<small style="font-size:18px;">Posts:</small>
+								<a href="#"  style="font-size:20px;">  <?php echo $postsCount['total'];?></a>
 							</h5>
 						</div>
 						<div class="folllowing" >
 							<h5>
-								<small style="font-size:15px;">Following:</small>
-								<a href="#">#</a>
+								<small style="font-size:18px;">Following:</small>
+								<a href="#" style="font-size:20px;"><?php echo $followingCount['total'];?></a>
 							</h5>
 						</div>
 						<div class="followers">
 							<h5>
-								<small style="font-size:15px;">Followers:</small>
-								<a href="#">#</a>
+								<small style="font-size:18px;">Followers:</small>
+								<a href="#" style="font-size:20px;"><?php  echo $followerCount["total"] ; ?></a>
 							</h5>
 						</div>
 </div>
 </div><br>
-
+</b>
 <div class="left1"><center>
 <div class="menu " style="color:black;" ><b> Options</b></div><hr >
 <div class="lefbutton "><a href="notes.php" >Notes</a></div><br>
 <div class="lefbutton spin"><a href="books.php" >Books</a></div><br>
 <div class="lefbutton spin"><a href="classroom.php" >Classroom</a></div><br>
 <div class="lefbutton spin"><a href="exam.php" >Exams</a></div><br>
-<div class="lefbutton spin"><a href="career.php">Career</a></div><br>
+<div class="lefbutton spin"><a href="career.php">Career</a></div><br><b>
 <?php /* <div class="lefbutton spin"><a href="groups.php" >Groups</a></div><br> */?>
 
 </center>
@@ -84,12 +84,7 @@ Knowledge makes you great.” <br>
 <div style="font-family:Georgia; " ><b style="font-family:Georgia; text-decoration: underline;">Who to follow- </b>  <a href="viewallfollower.php">view all</a></div>
        </center><br> <ul class="list">
 		<?php
-		         foreach($followeralready as $rowfollow){
 
-						$session['row21']=$rowfollow['follower_id'];
-            $row21=$session['row21'];
-						echo $row21;
-						 }
 
 
 							foreach($followerlist as $row2){
@@ -101,10 +96,10 @@ Knowledge makes you great.” <br>
 									<li>
 									<img src="profile_image/'.$row2['profile_image'].'" title="" alt="" />
 									<section class="list-left">
-				          <a href="userprofile.php? username='.$row2['user_name'].'"><h5 class="title">'.$row2['fname'].'  '.$row2['sname'].'</h5></a>
+				          <a href="userprofile.php? username='.$row2['user_name'].'"><h5 class="title"><b>'.$row2['fname'].'  '.$row2['sname'].'</b></h5></a>
 									<p class="catpath">'.$row2['user_gender'].'</p>
 									<span class="cityname">'.$row2['user_dob'].' </span>
-									<span class="adprice"  ><button   data-page="2" rel="'.$row2['user_id'].'" class="follow">Follow</a></span>
+									</b><span class="adprice"  ><button   data-page="2" rel="'.$row2['user_id'].'" class="follow">Follow</a></span><b>
 									</section>
 									<section class="list-right">
 
@@ -119,7 +114,7 @@ Knowledge makes you great.” <br>
 </div>
 <br>
 <hr>
-<div style="border:line; color:black;" ><center><p>© 2018 M&J(Unotes.in) <a href="#">Terms </a><a href="#">Policy </a><a href="#">About us </a><br><b>Developed by Ajay Kadoula<a href="http://www.uietkuk.org/">(Uiet)</a></b></p></center></div>
+<div style="border:line; color:black;" ><center><p>© 2018 M&J(Unotes.in) </b><a href="#">Terms </a><a href="#">Policy </a><a href="#">About us </a><b><br><b>Developed by Ajay Kadoula<a href="http://www.uietkuk.org/">(Uiet)</a></b></p></center></div>
 <div ><hr style="color:black;"></div>
 </div>
 

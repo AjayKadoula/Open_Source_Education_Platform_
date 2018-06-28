@@ -303,6 +303,7 @@ header {
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
+
 $(document).on('click','.loadmore',function () {
   $(this).text('Loading...');
     var ele = $(this).parent('li');
@@ -322,7 +323,8 @@ $(document).on('click','.loadmore',function () {
 });
 
 $(document).on('click','.follow',function () {
-  $(this).text('following');
+  $(this).css('background-color','#34CF7A');
+  $(this).html('<div class="icon-ok"></div> Following');
 	  var follow_id = $(this).attr("rel");
     var ele = $(this).parent('.adprice');
         $.ajax({
