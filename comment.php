@@ -4,28 +4,19 @@
   <meta charset="UTF-8">
   <title>comment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="dist/emojionearea.min.css" media="screen">
-   
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  
-  <script type="text/javascript" src="http://mervick.github.io/lib/google-code-prettify/prettify.js"></script>
-   <script type="text/javascript" src="dist/emojionearea.js"></script>
-   <script type="text/javascript">
-  $(document).ready(function() {
-    $("#example3").emojioneArea();
-  });
+
 </script>
-  <style>
-    .com{
-		margin-top:500px;
-		
-	}
-  </style>
+
   </head>
-  <body onload="prettyPrint()">
-   
-  <input id="example3" class="com" value="Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.">
- 
+  <body >
+
+<div class="inputcomment" onload="prettyPrint()">
+
+<form>
+  <input style="color:grey; height:50px; border:1px solid grey; border-radius:10px; width:100%; text-align: left;  display:block;" placeholder="Comment Here..." />
+  <button style="float:right; margin-top:-25px; background-color: #00b5ff; color:white; "> Comment</button>
+</form>
+</div>
 
 </body>
 </html>

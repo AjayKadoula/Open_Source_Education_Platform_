@@ -234,16 +234,24 @@ Knowledge makes you great.” <br>
 											<div class="post-body" style="display:inline;">
 										    <div style="position:relative;  padding:10px; background-color:#f4f5f7;" >
 											<p style="font-family: inherit;">'.$row['query'].'</p>
-											</div>'.( ($row['status_image'] != '') ? '<div class="post-img">
-												<img src="images/posts/'.$row['status_image'].'"></img></div>' : '').'
+											</div>
+											'.( ($row['status_image'] != '') ? '
+											<div class="post-img">
+												<img src="images/posts/'.$row['status_image'].'"></img>
+											</div>' : '').'
 											<div class="post-footer">
-												<div class="post-footer-inner">
-													<ul>
-														<li><a href="#"> Like</a></li>
-														<li ><a href="#" class="comment" > Answer </a></li>
-														<li><a href="#">Share</a></li>
+												<div class="post-footer-inner" style="position:relative;">
+													<ul style="height:30px; position:relative; padding:2px; border-radius:10px;  border:1px solid #008CBA;">
+													<a href="#">	<li class="one" style="float:left; width:33%;  border-right:1px solid  #008CBA;" > Upvote</li></a>
+													<a href="#"  ><li data-page="2" class="comment" style="width:28%; display:inline-block;" > Answer </li></a>
+													<a href="#">	<li style="float:right; width:33%; border-left:1px solid #008CBA; ">Share</li></a>
 													</ul>
+
 												</div>
+											</div><br>
+											<div>
+                      <div style="float:left;" ><a href="#"><p>1111111111111111111</p></a></div>
+											<div class="commentview"></div>
 											</div>
 										</div>
 									</div>
@@ -293,6 +301,23 @@ $(document).on('click','.loadmore',function () {
            if(response){
              ele.hide();
                 $(".news_list").append(response);
+              }
+            }
+   });
+});
+$(document).on('click','.comment',function () {
+  $(this).text('Loading...');
+    	var itemtoReplaceContentOf = $('.commentview');
+        $.ajax({
+      url: 'comment.php',
+      type: 'POST',
+      data: {
+              page:$(this).data('page'),
+            },
+      success: function(response){
+           if(response){
+                  itemtoReplaceContentOf.append(response);
+                 newcontent.appendTo(itemtoReplaceContentOf);
               }
             }
    });
