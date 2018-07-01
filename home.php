@@ -4,7 +4,7 @@ if(isset($_SESSION["user_name"])){
 include './bar\navigation_bar.php';
 include './post.php';
 $username= $_SESSION["user_name"];
-
+$user_id= $_SESSION["user_id"];
 ?>
 
 
@@ -243,15 +243,16 @@ Knowledge makes you great.” <br>
 												<div class="post-footer-inner" style="position:relative;">
 													<ul style="height:30px; position:relative; padding:2px; border-radius:10px;  border:1px solid #008CBA;">
 													<a href="#">	<li class="one" style="float:left; width:33%;  border-right:1px solid  #008CBA;" > Upvote</li></a>
-													<a href="#"  ><li data-page="2" class="comment" style="width:28%; display:inline-block;" > Answer </li></a>
+													<a href="#"  ><li data-page="2" class="comment" data-id="'.$row['post_id'].'"  style="width:28%; display:inline-block;" > Answer </li></a>
 													<a href="#">	<li style="float:right; width:33%; border-left:1px solid #008CBA; ">Share</li></a>
 													</ul>
 
 												</div>
 											</div><br>
 											<div>
-                      <div style="float:left;" ><a href="#"><p>1111111111111111111</p></a></div>
-											<div class="commentview"></div>
+                      <div style="float:left; margin-top:-100; display:block;" ><a href="#"><p>1111111111111111111</p></a></div>
+											<div class="commentview"></div><br>
+											<div class="commentbox" style=" border-radius:10px; border:1px solid lightblue; width:95%; height:50px;"></div>
 											</div>
 										</div>
 									</div>
@@ -307,12 +308,13 @@ $(document).on('click','.loadmore',function () {
 });
 $(document).on('click','.comment',function () {
   $(this).text('Loading...');
+	 var id= $(this).data('id');
     	var itemtoReplaceContentOf = $('.commentview');
         $.ajax({
       url: 'comment.php',
       type: 'POST',
       data: {
-              page:$(this).data('page'),
+              page:$(this).data('page'),id:id,
             },
       success: function(response){
            if(response){
@@ -322,6 +324,7 @@ $(document).on('click','.comment',function () {
             }
    });
 });
+
 
 $(document).on('click','.follow',function () {
   $(this).text('following');

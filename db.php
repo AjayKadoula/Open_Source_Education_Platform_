@@ -48,16 +48,8 @@ function is_member($connectionStatus,$username)
 	return false;
 }
 $resultsPerPage=5;
-function news_feed($connectionStatus,$resultsPerPage)
-{
-	 $query=mysqli_query("SELECT * FROM `news_feed`ORDER BY `news_feed`.`news_id` ASC LIMIT 0 , $resultsPerPage");
-  while($data=mysqli_fetch_array($connection_status,$query)){
-  $title=$data['news_title'];
-  $content=$data['news_description'];
-  echo "<li><h3>$title</h3><p>$content<p></li>";
-  }
 
-}
+
 function Status($connectionStatus,$username)
 {
 	$query="UPDATE users SET `Status` = 'Active' WHERE user_name like '$username'";
@@ -66,6 +58,15 @@ function Status($connectionStatus,$username)
 		return true;
 	}
 	return false;
+}
+function comment($connectionStatus,$user_id,$comment,$post_id)
+{
+ $query="INSERT INTO `comment` (`comment_id`, `content`, `user_id`,`post_id`,`comment_time`) VALUES (NULL, '$comment', '$user_id','$post_id',CURRENT_TIMESTAMP)";
+ $result=mysqli_query($connectionStatus,$query);
+ if($result){
+   return true;
+ }
+ return false;
 }
 function StatusInactive($connectionStatus,$username)
 {
