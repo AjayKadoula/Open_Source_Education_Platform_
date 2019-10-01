@@ -5,8 +5,8 @@ session_start();
                      $password=$_POST["password"];
   if($username !="" AND $password !=""){
 
-				              include"db.php";
-	                    $connectionStatu = connect_db();
+				              include"db.php"; // include the db.php file
+	                    $connectionStatu = connect_db(); 
 	                    $status = find_user($connectionStatu,$username,$password);
                       $statu = Status($connectionStatu,$username);
 	if(is_array($status)){
